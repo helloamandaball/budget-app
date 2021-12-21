@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* CSS Colors:
+      Header Background Blue: #3863a0
+      Highlighted Tabs Mint: #cdf5de & #1e3250
+      Grayed-out Tab: #eef1f5 & #9fafc1 
+      Main Text: #798da3
+      Edit/Del Icons: #c9d3dd
+      Budget Total Box: #f0fff1-fill, #c9d3dd-border, #798da3-text
+      Bill Highlight Box: #e9f29b-fill, #3863a0-text, #798da3-icons
+      Rule Divider: #edf0f4, 1px solid
+      Progress Bar: #3863a0-main, #8fec9b-fill 
+*/

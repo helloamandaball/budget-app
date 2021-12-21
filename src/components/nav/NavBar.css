@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+
+/* Top Nav Bar */
+.hdrNavBar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    background-color: #3863a0;
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.hdrTitle {
+    flex-basis: 40%;
+    flex-grow: 2;
+    flex-shrink: 1;
+    width: 30%;
+    align-self: center;
+    font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+    color: #FFF;
+    font-size: 28px;
+    text-align: center;
+    padding: 2px 0px 0px;
+}
+
+.menuIconDiv{
+    flex-basis: 10%;
+}
+
+.menuIcon {
+    width: 30px;
+    height: 30x;
+    margin: 0;
+}
+
+.logoutBtnDiv {
+    flex-basis: 8%;
+    margin-left: auto;
+    margin-right: 2px;
+}
+
+.logoutBtn {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 26px;
+    width: 74px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 2px 5px 0px;
+    margin: 0;
+}
+
+/* Main Nav */
+
+.navBar {
+    background-color: #edf0f4;
+    border-top: 1px solid #fff;
+    height: 60px;
+    width: 100%;
+    padding: 0px 30px;
+    margin: 0;
+}
+
+.navList {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.navItem {
+    flex-basis: auto;
+    /* justify-content: flex-start;
+    align-self: flex-start; */
+    margin: 15px auto 0px;
+    padding: 0;
+}
+
+.navBtn {
+    flex-basis: auto;
+    /* justify-content: flex-start;
+    align-self: flex-start; */
+    margin: 15px 0 0px;
+    padding: 0;
+}
+
+.navLink {
+    font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3863a0;
+}
+
+.addMonthBtn {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    width: 120px;
+    color: #3863a0;
+    background-color: #8fec9b;
+    border: 1px solid #61e5b4;
+    border-radius: 2px;
+    padding: 2px 5px 0px;
+    margin: 0;
+}
