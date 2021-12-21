@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 // import Button from 'react-bootstrap/Button';
 import "./NavBar.css"
 import menuIcon from ".././images/menuIcon.png"
+import searchIcon from ".././images/searchIcon.png"
 
 
 export const NavBar = (props) => {
@@ -42,17 +43,21 @@ export const NavBar = (props) => {
                         <li className="navItem">
                             <Link className="navLink" to="/events">ALL MONTHS</Link>
                         </li>
-                        <li className="navItem">
-                            <Link className="navLink" to="/events">SEARCH</Link>
+                        <li className="navItem-search">
+                            <form action="/" method="get" className="searchBox">
+                                <label htmlFor="header-search">
+                                    <span className="visually-hidden">Search</span>
+                                </label>
+                                <img src={searchIcon} alt="search icon" className="searchIcon" />
+                                <input className="searchInput"
+                                    type="text"
+                                    id="header-search"
+                                    placeholder=""
+                                    name="search" 
+                                />
+                            </form>
                         </li>
                     </ul>
-                    {/* <span className="navbar-text">
-                        <ul className="nav nav-pills nav-fill">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/register">Register</Link>
-                            </li>
-                        </ul>
-                    </span> */}
                 </nav>
             </>
         )
