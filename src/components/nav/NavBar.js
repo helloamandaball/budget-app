@@ -7,7 +7,7 @@ import menuIcon from ".././images/menuIcon.png"
 import searchIcon from ".././images/searchIcon.png"
 import { Nav } from "react-bootstrap"
 
-
+//
 export const NavBar = (props) => {
     const [navBarMenu, setNavBarMenu] = useState(false);
     const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
