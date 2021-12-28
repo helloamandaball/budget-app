@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+
+.billHdr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40px;
+}
+
+.h2, h2 {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding:0;
+    margin:0;
+}
+
+.addBillBtn {
+    background-color: #61e5b4;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #bebebe;
+    padding: 0;
+    margin-left: 20px;
+}
+    .addBillBtn:hover {
+        background-color: #5cbfed;
+    }
+
+.bills {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 10px 10px;
+}
+
+.billCard {
+    border: 1px solid #c9d3dd;
+    background-color: #FFF;
+    border-radius: 8px 0px 8px 8px;
+    width: 30%;
+}
+
+.billListContainer {
+    display: flex;
+}
+
+.billEdit, .billDel {
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    color: #c9d3dd;
+    width: 24px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.billEdit:hover, .billDel:hover {
+    background-color: transparent;
+    color: #798da3;
+} 
+
+input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.692); /* IE */
+    -moz-transform: scale(1.692); /* FF */
+    -webkit-transform: scale(1.692); /* Safari and Chrome */
+    -o-transform: scale(1.692); /* Opera */
+    transform: scale(1.692);
+    background-color: #FFF;
+    /* outline: 1px solid red; */
+    padding: 20px;
+    margin:0;
+  }
+
+  .checkedBillBox-completed input[type=checkbox]  {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.2); /* IE */
+    -moz-transform: scale(1.2); /* FF */
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+    -o-transform: scale(1.2); /* Opera */
+    transform: scale(1.2);
+    padding: 20px;
+    margin:0;
+  }

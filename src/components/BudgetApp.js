@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { NavBar } from "./nav/NavBar";
-import { ApplicationViews } from "./ApplicationViews";
-import "./BudgetApp.css";
 import { Routes, Route, Navigate } from "react-router";
+// import { NavBar } from "./nav/NavBar";
+import { ApplicationViews } from "./ApplicationViews";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register"
+import "./BudgetApp.css";
 
 export const BudgetApp = () => {
   // eslint-disable-next-line
@@ -15,8 +15,10 @@ export const BudgetApp = () => {
   if (localStorage.getItem("activeUser")) {
     return (
       <>
-        <NavBar />
-        <ApplicationViews />
+        {/* <NavBar /> */}
+        <section className="main">
+          <ApplicationViews />
+        </section>
       </>
     );
   } else {
