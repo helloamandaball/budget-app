@@ -58,6 +58,12 @@
     margin: 0;
 }
 
+.logoutBtn:hover {
+    color: #3863a0;
+    background-color: #fff;
+    font-weight: bold;
+}
+
 /* Main Nav */
 
 .navBar {
@@ -65,7 +71,7 @@
     border-top: 1px solid #fff;
     height: 60px;
     width: 100%;
-    padding: 0px 30px;
+    padding: 0px 24px 0px 26px;
     margin: 0;
 }
 
@@ -84,17 +90,19 @@
 
 .navItem {
     flex-basis: auto;
-    /* justify-content: flex-start;
-    align-self: flex-start; */
-    margin: 15px auto 0px;
+    margin: 8px auto 0px;
     padding: 0;
 }
 
 .navBtn {
     flex-basis: auto;
-    /* justify-content: flex-start;
-    align-self: flex-start; */
     margin: 15px 0 0px;
+    padding: 0;
+}
+
+.navItem-search{
+    flex-basis: auto;
+    margin: 5px 0 0;
     padding: 0;
 }
 
@@ -104,6 +112,13 @@
     font-weight: bold;
     text-decoration: none;
     color: #3863a0;
+    padding: 5px 5px 6px;
+}
+
+.navLink:hover {
+    color: #fff;
+    background-color: #5cbfed;
+    border-radius: 2px;
 }
 
 .addMonthBtn {
@@ -117,5 +132,37 @@
     border: 1px solid #61e5b4;
     border-radius: 2px;
     padding: 2px 5px 0px;
-    margin: 0;
+    margin: 0 0 4px;
+}
+
+.addMonthBtn:hover{
+    color: #fff;
+    border-color: #5cbfed;
+    background-color: #5cbfed;
+}
+
+.searchIcon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+}
+
+.searchBox {
+    height: 34px;
+    width: 200px;
+    color: #c9d3dd;
+    background-color: #fff;
+    border: 2px solid #c9d3dd; 
+    border-radius: 20px;
+    padding: 0px 3px;
+    margin-top: 4px;
+}
+
+.searchInput {
+    height: 30px;
+    width: 166px;
+    border: none;
+    border-radius: 16px;
+    background-color: #fff;
+    margin: auto;
 }
