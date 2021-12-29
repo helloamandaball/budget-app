@@ -41,27 +41,29 @@ export const Login = (props) => {
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
             </dialog>
 
-            <section>
+            <section className="vertically-center">
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Team Holly Jolly</h1>
-                    <h3>Please sign in</h3>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email"
-                            id="email"
-                            className="form-control"
-                            placeholder="Email address"
-                            required autoFocus />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
-                        </button>
-                    </fieldset>
+                    <h1>Budget Tracker</h1>
+                    {/* <h3>Please sign in</h3> */}
+                    <div className="emailLogin">
+                        <fieldset>
+                            {/* <label htmlFor="inputEmail"> Enter your email </label> */}
+                            <input ref={email} type="email"
+                                id="email"
+                                className="form-control emailInputBox"
+                                placeholder="Enter your email"
+                                required autoFocus />
+                        </fieldset>
+                        <fieldset>
+                            <button type="submit">
+                                LOG IN
+                            </button>
+                        </fieldset>
+                    </div>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <div className="link--register">
+                    <Link to="/register">Not a member yet? Sign up today!</Link>
+                </div>
             </section>
         </main>
     )

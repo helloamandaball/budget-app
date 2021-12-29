@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
 .h1, h1 {
     font-size: 2.5rem;
+    font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    color: #FFF;
+    text-align: center;
    }
    
    fieldset {
@@ -44,17 +50,25 @@
    
    .container--login {
     text-align: center;
+    background-color: #3863a0;
+    padding: 30px;
+    min-height: 25rem;
+    position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       margin: auto;
    }
    
    .form--login {
     background-position-x: right;
-    
     z-index: 1;
-    min-height: 25rem;
+    min-height: 10rem;
     min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
+    /* background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
    }
    
    .button--close {
@@ -65,6 +79,62 @@
    .dialog {
     min-width: 15rem;
     min-height: 5rem;
+   }
+
+   .link--register a{
+       color: #cdf5de;
+       font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+       text-decoration: underline;
+       font-size: 16px;
+   }
+
+   .emailLogin {
+       display: flex;
+       justify-content: center;
+       margin: 20px auto;
+   }
+
+   .emailInputBox {
+        height:34px;
+        min-width: 226px;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1;
+        color:#798da3;
+        background-color: #FFF;
+        border: 2px solid #c9d3dd;
+        padding: 0px 0px 0px 8px;
+        margin: 0 5px 0 0;
+   }
+
+   button {
+       background-color: #8fec9b;
+       border: 1px solid #cdf5de;
+       border-radius: 4px;
+       height: 38px;
+       width: 100px;
+       font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+       font-weight: bold;
+       font-size: 14px;
+       color: #3863a0;
+       margin-left: 20px;
+   }
+
+   button:hover, button:focus {
+       background-color: #61e5b4;
+       /* background-image: linear-gradient(#8fec9b, #61e5b4 ); */
+   }
+
+   .vertically-center {
+       height: 200px;
+       margin: auto;
+       vertical-align: middle;
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       margin: auto;
    }
    
    
