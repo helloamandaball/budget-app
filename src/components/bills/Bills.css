@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
 
+
 .billHdr {
     display: flex;
     justify-content: flex-start;
@@ -50,38 +51,84 @@
     width: 30%;
 }
 
-.billListContainer {
+.billsListContainer {
     display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
-.billEdit, .billDel {
-    background-color: transparent;
-    border: none;
-    font-size: 19px;
-    color: #c9d3dd;
-    width: 24px;
-    height: 30px;
-    padding: 0;
-    margin: 0;
-}
+    .billList-leftColumn {
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
 
-.billEdit:hover, .billDel:hover {
-    background-color: transparent;
-    color: #798da3;
-} 
+    .billList-rightColumn {
+        align-self: flex-start;
+        text-align: right;
+        margin: 10px 5px auto auto;
+    }
 
-input[type=checkbox] {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(1.692); /* IE */
-    -moz-transform: scale(1.692); /* FF */
-    -webkit-transform: scale(1.692); /* Safari and Chrome */
-    -o-transform: scale(1.692); /* Opera */
-    transform: scale(1.692);
-    background-color: #FFF;
-    /* outline: 1px solid red; */
-    padding: 20px;
-    margin:0;
-  }
+    .billName {
+        margin-top: 0;
+    }
+
+    .billAmount {
+        margin-top: 0;
+    }
+
+    .billDateText {
+        margin-top: 0;
+    }
+
+    .billDate {
+        margin-top: 0;
+    }
+
+    .billDetails {
+        margin-bottom: 0;
+    }
+
+    .detailsText {
+        margin-top: 0;
+    }
+
+    .billType {
+        margin-top: 0;
+    }
+
+    .billMemo {
+        margin-top: 0;
+    }
+
+    .billEdit, .billDel {
+        background-color: transparent;
+        border: none;
+        font-size: 19px;
+        color: #c9d3dd;
+        width: 24px;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .billEdit:hover, .billDel:hover {
+        background-color: transparent;
+        color: #798da3;
+    } 
+
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1.692); /* IE */
+        -moz-transform: scale(1.692); /* FF */
+        -webkit-transform: scale(1.692); /* Safari and Chrome */
+        -o-transform: scale(1.692); /* Opera */
+        transform: scale(1.692);
+        background-color: #FFF;
+        /* outline: 1px solid red; */
+        padding: 20px;
+        margin:0 10px 0 0;
+    }
 
   .checkedBillBox-completed input[type=checkbox]  {
     /* Double-sized Checkboxes */

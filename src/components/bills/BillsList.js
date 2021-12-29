@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react"
 import { useNavigate } from "react-router"
-import { BillsContext } from "./BillDataProvider"
+import { BillsContext } from "./BillsDataProvider"
 import { BillCard } from "./BillCard"
-import "./Bill.css"
+import "./Bills.css"
 
-export const BillList = () => {
+export const BillsList = () => {
     const { bills, getBills } = useContext(BillsContext)
 
     const navigate = useNavigate()
@@ -16,7 +16,7 @@ export const BillList = () => {
 
     return (
         <>
-            <div className="billContainer">
+            <div className="billsContainer">
                 <div className="billHdr">
                     <h2>BILLS</h2>
                     <button className="addBillBtn" onClick={() => navigate("/bills/create")}>

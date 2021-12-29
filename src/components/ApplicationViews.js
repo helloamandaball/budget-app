@@ -1,23 +1,27 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom";
-import { BillList } from "./bills/BillList";
-import { BillsProvider } from "./bills/BillDataProvider";
+import { BillsList } from "./bills/BillsList";
+import { BillsProvider } from "./bills/BillsDataProvider";
 import { BillForm } from "./bills/BillForm";
+import { BillTypesProvider } from "./bills/BillTypesDataProvider";
 import { MonthTab } from "./tabs/MonthTab";
 
 //ApplicationViews renders the function based on the web address
 export const ApplicationViews = () => {
 
-  return  (
-    <BillsProvider>
-      <Routes>
-        <Route path="tabs/*" element={<MonthTab />} />
-        <Route path="/" element={<BillList />} />
-        <Route path="bills/*" element={<BillList />} />
-        <Route path="bills/create/*" element={<BillForm />} />
-        {/* <Route path="bills/edit/:billId/*" element={<BillForm />} />> */}
+    return (
+        <BillsProvider>
+            <BillTypesProvider>
+                <Routes>
+                    
+                    <Route path="tabs/*" element={<MonthTab />} />
+                    <Route path="/" element={<BillsList />} />
+                    <Route path="bills/*" element={<BillsList />} />
+                    <Route path="bills/create/*" element={<BillForm />} />
+                    <Route path="bills/edit/:billId/*" element={<BillForm />} />
 
-      </Routes>
-    </BillsProvider>
-  );
+                </Routes>
+            </BillTypesProvider>
+        </BillsProvider>
+    );
 }

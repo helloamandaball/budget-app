@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react"
 import { useNavigate } from "react-router"
-import { BillsContext } from "../bills/BillDataProvider"
-import "../bills/Bill.css"
+import { BillsContext } from "../bills/BillsDataProvider"
+import "../bills/Bills.css"
 
 export const MonthTab = () => {
     const { bills, getBills } = useContext(BillsContext)
 
     const navigate = useNavigate()
 
-    useEffect (() => {
+    useEffect(() => {
         getBills()
     }, [])
 
@@ -23,12 +23,12 @@ export const MonthTab = () => {
                 </div>
                 <div className="months">
                     {bills.map(bill => {
-                    return <MonthTab 
-                            key={bill.id} 
+                        return <MonthTab
+                            key={bill.id}
                             month={bill.month}
-                            year={bill.year} 
-                            />
-                        })
+                            year={bill.year}
+                        />
+                    })
                     }
                 </div>
             </div>
