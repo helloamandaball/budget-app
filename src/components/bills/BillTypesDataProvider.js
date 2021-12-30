@@ -6,7 +6,7 @@ export const BillTypesProvider = (props) => {
     const [billTypes, setBillTypes] = useState([])
 
     const getBillTypes = () => {
-        return fetch("http://localhost:8088/billTypes")
+        return fetch("http://localhost:8088/billTypes?_embed=bills")
             .then(res => res.json())
             .then(setBillTypes)
     }

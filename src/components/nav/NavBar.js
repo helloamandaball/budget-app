@@ -19,6 +19,7 @@ export const NavBar = (props) => {
                 <div className="menuIconDiv">
                     <Link to='#' className="">
                         <img src={menuIcon} alt="menu icon" className="menuIcon" />
+                        &#x2630;
                     </Link>
                 </div>
                 <div className="hdrTitle">

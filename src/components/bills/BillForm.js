@@ -34,7 +34,7 @@ export const BillForm = () => {
                     amount: parseInt(bill.amount),
                     memo: bill.memo,
                     paid: false,
-                    typeId: parseInt(bill.typeId),
+                    typeId: parseInt(bill.typeId)
                 })
                     .then(() => navigate(`/bills/${bill.id}`))
             } else {
@@ -75,7 +75,7 @@ export const BillForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Bill name: </label>
-                    <input type="text" id="name" name="name" required autoFocus className="form-control"
+                    <input type="text" id="name" name="name" required autoFocus className="form-control" maxLength="18"
                         placeholder="Bill name"
                         onChange={handleControlledInputChange}
                         defaultValue={bill.name} />
@@ -85,7 +85,7 @@ export const BillForm = () => {
                 <div className="form-group">
                     <label htmlFor="amount">Amount due: </label>
                     <br />
-                    $<input type="number" id="amount" name="amount" required autoFocus className="form-control"
+                    $<input type="number" id="amount" name="amount" required className="form-control"
                         placeholder="Amount due"
                         onChange={handleControlledInputChange}
                         defaultValue={bill.amount} />
@@ -116,7 +116,7 @@ export const BillForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="memo">Memo: </label>
-                    <input type="text" id="memo" name="memo" required autoFocus className="form-control"
+                    <input type="text" id="memo" name="memo" required autoFocus className="form-control" maxLength="100"
                         placeholder="Add memo here"
                         onChange={handleControlledInputChange}
                         defaultValue={bill.memo} />
