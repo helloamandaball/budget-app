@@ -26,7 +26,7 @@ export const BillsProvider = (props) => {
     }
 
     const getBillById = (id) => {
-        return fetch(`http://localhost:8088/bills/${id}?_expand=user`)
+        return fetch(`http://localhost:8088/bills/${id}`)
             .then(res => res.json())
     }
 

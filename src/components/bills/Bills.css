@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
 
-
 .billHdr {
     display: flex;
     justify-content: flex-start;
@@ -71,6 +70,9 @@
         text-align: right;
         margin: 5px 5px 10px auto;
     }
+    .billList-bottomHalf {
+        margin: 5px 10px 10px 8px;
+    }
 
     .billName {
         font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
@@ -81,7 +83,7 @@
         letter-spacing: normal;
         color: #798da3;
         margin-top: 0;
-        margin-bottom: 5px;
+        margin-bottom: 1px;
     }
 
     .billAmount {
@@ -91,7 +93,7 @@
         font-weight: 600;
         color: #798da3;
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
     }
 
     .billDateText {
@@ -101,6 +103,7 @@
         font-weight: 500;
         color: #798da3;
         margin-top: 0;
+        margin-bottom: 5px;
     }
 
     .billDate {
@@ -189,6 +192,7 @@
         font-weight: 400;
         color: #798da3;
         margin-top: 0;
+        margin-right: 5px;
     }
 
     .billMemoBorder {
@@ -196,7 +200,7 @@
         border-radius: 3px;
         height: 50px;
         overflow: hidden;
-        padding: 5px 10px 5px 5px;
+        padding: 5px 5px 5px 5px;
         margin-top:0;
         margin-bottom: 15px;
     }
@@ -223,6 +227,8 @@
 
     .billEditDel {
         text-align: right;
+        margin-top: auto;
+        margin-bottom:10px;
     }
 
     .checkedBillBox {

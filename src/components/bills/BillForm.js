@@ -46,7 +46,7 @@ export const BillForm = () => {
                     memo: bill.memo,
                     paid: false,
                     typeId: parseInt(bill.typeId),
-                    budgetId: parseInt(bill.budgetId)
+                    // budgetId: parseInt(bill.budgetId)
                 })
                     .then(() => navigate("/bills"))
             }
@@ -56,11 +56,11 @@ export const BillForm = () => {
     useEffect(() => {
         getBillTypes().then(() => {
             if (billId) {
-                //   console.log("bill ID:", billId)
+                  console.log("bill ID:", billId)
                 getBillById(billId)
                     .then(bill => {
                         setBill(bill)
-                        //   console.log("bill ID:", billId)
+                          console.log("bill ID:", billId)
                         setIsLoading(false)
                     })
             } else {
