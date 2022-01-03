@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import "bootstrap/dist/css/bootstrap.min.css"
+// import "bootstrap/dist/css/bootstrap.min.css"
+// import { Nav } from "react-bootstrap"
 // import Button from 'react-bootstrap/Button';
-import "./NavBar.css"
-import menuIcon from ".././images/menuIcon.png"
+// import menuIcon from ".././images/menuIcon.png"
 import searchIcon from ".././images/searchIcon.png"
-import { Nav } from "react-bootstrap"
+import "./NavBar.css"
 
 //
 export const NavBar = (props) => {
@@ -17,13 +17,13 @@ export const NavBar = (props) => {
         <>
             <div className="hdrNavBar">
                 <div className="menuIconDiv">
-                    <Link to='#' className="">
-                        <img src={menuIcon} alt="menu icon" className="menuIcon" />
+                    <Link to='#' className="hamburgerMenuIcon">
+                        {/* <img src={menuIcon} alt="menu icon" className="menuIcon" /> */}
                         &#x2630;
                     </Link>
                 </div>
-                <div className="hdrTitle">
-                    Budget Tracker
+                <div className="hdrTitleDiv">
+                    <h2>Budget Tracker</h2>
                 </div>
                 <div className="logoutBtnDiv">
                     <Link className="logout" to="/budgets/create/">
@@ -34,8 +34,8 @@ export const NavBar = (props) => {
             <nav className={navBarMenu ? 'navBar active' : 'navBar'}>
                 <ul className="navList">
                     <li className="navBtn">
-                        <Link className="addMonth" to="/budgets/create/">
-                            <button className="addMonthBtn">ADD MONTH+</button>
+                        <Link className="addBudget" to="/budgets/create/">
+                            <button className="addBudgetBtn">NEW BUDGET+</button>
                         </Link>
 
                     </li>
@@ -53,9 +53,9 @@ export const NavBar = (props) => {
                     </li>
                     <li className="navItem-search">
                         <form action="/" method="get" className="searchBox">
-                            <label htmlFor="header-search">
+                            {/* <label htmlFor="header-search">
                                 <span className="visually-hidden">Search</span>
-                            </label>
+                            </label> */}
                             <img src={searchIcon} alt="search icon" className="searchIcon" />
                             <input className="searchInput"
                                 type="text"

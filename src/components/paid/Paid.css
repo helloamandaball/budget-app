@@ -1,0 +1,36 @@
+.billsPaidContainer {
+    padding: 20px; 
+}
+
+.billsPaidList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px 10px;
+    margin-top: 1em;
+  }
+  
+  .billsPaid {
+      flex-basis: 70vw;
+      padding: 0;
+      /* border: 1px dashed #1e3250; */
+      color: gray;
+  }
+
+  .billNameColumn {
+    width: 50vw;
+    padding-right: 10px;
+  }
+
+  .billDateColumn {
+    width: 30vw;
+  }
+
+  .billPaidColumn {
+    width: 20vw;
+    text-align: center;
+  }
+
+tr:nth-child(even) {background: rgb(238, 238, 238)}
+tr:nth-child(odd) {background: #FFF}

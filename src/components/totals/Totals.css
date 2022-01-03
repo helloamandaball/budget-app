@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+.h2, h2 {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding:0;
+    margin:0;
+}
+
+.totals {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 10px;
+}
+
+.totalsListContainer {
+    display: flex;
+    border: 1px solid #c9d3dd;
+    border-radius: 10px 0 10px 10px;
+    background-color: #f0fff1;
+    box-shadow: 5px 5px 10px #e2e2e2;
+    padding: 20px 3px 20px 20px;
+}
+
+    .totalsList {
+        width: 95%;
+    }
+
+    .totalsEdit {
+        width: 30px;
+        margin: -3px 0 0 6px;
+    }
+
+    .totalsEditBtn {
+        margin: 0;
+    }
+
+    .totalsList {
+        text-align: right;
+    }
+
+    .totalBudget {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        line-height: normal;
+        font-weight: 500;
+        color: #798da3;
+        margin: 0 0 10px;
+    }
+
+    .totalAmount {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        line-height: normal;
+        font-weight: 600;
+        color: #798da3;
+        margin: 0;
+    }
+
+    .totalPending, .totalPaid {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 400;
+        color: #798da3;
+        margin: 0 0 10px;
+    }
+
+    .totalRemaining {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 400;
+        color: #798da3;
+        margin: 0;
+    }
+
+    .pendingAmount, .paidAmount, .remainingAmount {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        line-height: normal;
+        font-weight: 600;
+        color: #798da3;
+        margin: 0;
+
+    }
+
+    .totalsEditBtn {
+        background-color: transparent;
+        border: none;
+        font-size: 19px;
+        color: #c9d3dd;
+        width: 24px;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .totalsEditBtn:hover {
+        background-color: transparent;
+        color: #798da3;
+    } 
