@@ -82,10 +82,14 @@
 
 /* Main Nav */
 
+nav {
+    background-color: #edf0f4;
+}
+
 .navBar {
     background-color: #edf0f4;
     border-top: 1px solid #fff;
-    height: 60px;
+    height: 53px;
     width: 100%;
     margin: 0px 0px 30px;
 }

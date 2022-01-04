@@ -12,11 +12,13 @@ export const Dashboard = () => {
             </section>
             <section className="main">
                 <div className="flex-row-reverse">
-                    <TotalsList />
-                    <BillsList />
-                </div>
-                <div className="">
-                    <PaidList />
+                    <div className="rightColumn">
+                        <TotalsList />
+                    </div>
+                    <div className="leftColumn">
+                        <BillsList />
+                        <PaidList />
+                    </div>
                 </div>
                 <div className="">
                     NOTES GO HERE.

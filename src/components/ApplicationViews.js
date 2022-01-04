@@ -8,6 +8,7 @@ import { BillTypesProvider } from "./bills/BillTypesDataProvider";
 import { TotalsList } from "./totals/TotalsList";
 import { TotalsForm } from "./totals/TotalsForm"
 import { PaidList } from "./paid/PaidList"
+import { PaidEditForm } from "./paid/PaidEditForm";
 import { MonthTab } from "./tabs/MonthTab";
 
 //ApplicationViews renders the function based on the web address
@@ -25,11 +26,12 @@ export const ApplicationViews = () => {
                     <Route path="bills/create/*" element={<BillForm />} />
                     <Route path="bills/edit/:billId/*" element={<BillForm />} />
 
-                    <Route path="bills/totals/*" element={<TotalsList />} />
-                    <Route path="bills/totals/create/*" element={<TotalsForm />} />
+                    <Route path="totals/*" element={<TotalsList />} />
+                    <Route path="totals/create/*" element={<TotalsForm />} />
                     <Route path="billTotals/edit/:billId/*" element={<TotalsForm />} />
 
-                    <Route path="bills/paid/*" element={<PaidList />} />
+                    <Route path="paid/*" element={<PaidList />} />
+                    <Route path="paid/edit/:billId/*" element={<PaidEditForm />} />
 
                 </Routes>
         </BillTypesProvider>

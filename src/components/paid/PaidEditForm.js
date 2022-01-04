@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from 'react-router-dom';
-import { BillsContext } from "./BillsDataProvider"
-import { BillTypesContext } from "./BillTypesDataProvider";
-import "./Bills.css"
+import { BillsContext } from "../bills/BillsDataProvider"
+import { BillTypesContext } from "../bills/BillTypesDataProvider";
+import "../bills/Bills.css"
 
-export const BillForm = () => {
+export const PaidEditForm = () => {
     const { addBill, getBillById, updateBill } = useContext(BillsContext)
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
 
@@ -37,19 +37,7 @@ export const BillForm = () => {
                     typeId: parseInt(bill.typeId)
                 })
                     .then(() => navigate(`/bills/${bill.id}`))
-            } else {
-                //POST - add new bill
-                addBill({
-                    name: bill.name,
-                    date: bill.date,
-                    amount: parseInt(bill.amount),
-                    memo: bill.memo,
-                    paid: false,
-                    typeId: parseInt(bill.typeId),
-                    // budgetId: parseInt(bill.budgetId)
-                })
-                    .then(() => navigate("/bills"))
-            }
+            } 
         }
     }
 
@@ -71,9 +59,7 @@ export const BillForm = () => {
 
     return (
         <form className="billForm">
-            <h2 className="billForm__title">
-                {billId ? <>EDIT BILL</> : <>NEW BILL</>}
-            </h2>
+            <h2 className="billForm__title">EDIT PAID BILL</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Bill name: </label>
@@ -90,7 +76,7 @@ export const BillForm = () => {
                     $<input type="number" id="amount" name="amount" required className="form-control"
                         placeholder="Amount due"
                         onChange={handleControlledInputChange}
-                        defaultValue={bill.amount.toFixed(2)} />
+                        defaultValue={bill.amount} />
                 </div>
             </fieldset>
             <fieldset>
@@ -130,7 +116,7 @@ export const BillForm = () => {
                     event.preventDefault() // Prevent browser from submitting the form and refreshing the page
                     handleSaveBill()
                 }}>
-                {billId ? <>Save Bill</> : <>Add Bill</>}
+                SAVE
             </button>
         </form>
     )

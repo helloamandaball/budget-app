@@ -10,4 +10,12 @@
     flex-wrap: nowrap;
 }
 
+.leftColumn {
+ width: 60%;
+}
+
+.rightColumn {
+    width: 40%;
+}
+
 

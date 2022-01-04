@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+
+.h2,h2 {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
 .billsPaidContainer {
-    padding: 20px; 
+    border-top: 1px solid #edf0f4;
+    padding: 20px 0 0;
+    margin: 30px 0px 30px;
 }
 
 .billsPaidList {
@@ -9,28 +20,104 @@
     justify-content: flex-start;
     gap: 5px 10px;
     margin-top: 1em;
-  }
-  
-  .billsPaid {
-      flex-basis: 70vw;
-      padding: 0;
-      /* border: 1px dashed #1e3250; */
-      color: gray;
-  }
+}
 
-  .billNameColumn {
-    width: 50vw;
+.billsPaid {
+    flex-basis: 70vw;
+    padding: 0;
+    /* border: 1px dashed #1e3250; */
+    color: gray;
+}
+
+.paidBillNameColumn {
+    width: 35%;
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #798da3;
     padding-right: 10px;
-  }
+}
 
-  .billDateColumn {
-    width: 30vw;
-  }
+.paidBillDateColumn {
+    width: 10%;
+    min-width: 80px;
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #798da3;
+    padding-left: 5px;
+}
 
-  .billPaidColumn {
-    width: 20vw;
-    text-align: center;
-  }
+.paidBillAmountColumn {
+    width: 20%;
+    min-width: 80px;
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    color: #798da3;
+    padding-left: 5px;
+    padding-right: 15px;
+}
 
-tr:nth-child(even) {background: rgb(238, 238, 238)}
-tr:nth-child(odd) {background: #FFF}
+.paidBillEdit, .paidBillDel {
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    color: #c9d3dd;
+    width: 24px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.paidBillEdit:hover, .paidBillDel:hover {
+    background-color: transparent;
+    color: #798da3;
+}
+
+.paidBillEditDel {
+    width: 80px;
+    text-align: right;
+    margin-top: auto;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.paidBillPaidColumn {
+    width: 30px;
+    text-align: left;
+    padding:0;
+    margin:0;
+}
+
+.checkedBillBox-checked input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.2);
+    /* IE */
+    -moz-transform: scale(1.2);
+    /* FF */
+    -webkit-transform: scale(1.2);
+    /* Safari and Chrome */
+    -o-transform: scale(1.2);
+    /* Opera */
+    transform: scale(1.2);
+    padding: 0px;
+    margin: 0;
+}
+
+
+/* Alternate colors of table rows */
+/* tr:nth-child(even) {
+    background: #e7e7e7
+}
+
+tr:nth-child(odd) {
+    background: #f6f6f6
+} */

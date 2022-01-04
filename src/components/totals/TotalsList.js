@@ -18,6 +18,6 @@ export const TotalsList = () => {
     //   }, [])
 
     return (
-        <TotalsCard />
+            <TotalsCard />
     )
 }

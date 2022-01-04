@@ -19,17 +19,17 @@ export const TotalsCard = ({budget, bill}) => {
     const totalPending = () => {
         // pending amount is total amount of the bills pending and added together {bills.amount, paid = false}
         let unpaidAmounts = bills.filter(bill => bill.paid === false).map(bill => bill.amount)
-            console.log(unpaidAmounts)
+            console.log("List of unpaidAmounts:", unpaidAmounts)
+
+        let sum = 0;
+        for (let i = 0; i < unpaidAmounts.length; i++) {
+                console.log("inside the loop", unpaidAmounts)
+            sum += unpaidAmounts[i]
+        }
+            console.log("this is the sum amount:", sum)
+        
         // .reduce((total) => total + bill.amount, 0)
         // .reduce((previousValue, currentValue) => previousValue + currentValue.amount)
-        let sum = 0;
-        for (let i=0; i < unpaidAmounts; i++) {
-            sum += unpaidAmounts[i]
-            console.log("inside the loop")
-        }
-
-            console.log("this is the sum:", sum)
-        
 
         //.toFixed(2)
     }
@@ -51,11 +51,11 @@ export const TotalsCard = ({budget, bill}) => {
 
     return(
         <section className="totals">
-            {totalPending()}
+            {totalPending}
             <div className="totalsListContainer">
                 <div className="totalsList">
                     <p className="totalBudget">Total Budget: $<span className="totalAmount">{totalBudget}</span></p>
-                    {/* <p className="totalPending">Pending: $<span className="pendingAmount">{totalPending()}</span></p> */}
+                    <p className="totalPending">Pending: $<span className="pendingAmount">{totalPending()}</span></p>
                     <p className="totalPaid">Paid: $<span className="paidAmount">{totalPaid}</span></p>
                     <p className="totalRemaining">Remaining: $<span className="remainingAmount">{totalRemaining}</span></p>
                 </div>

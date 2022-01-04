@@ -47,16 +47,17 @@ export const BillCard = ({ bill, typeOfBill }) => {
                     <label htmlFor="checkedBill" className="checkedBillLabel">PAID</label> 
                     <br />
                     <input type="checkbox" name="checkedBill" id="checkedBill" className="checkedBillBox" onChange={handleCheckedInputChange}></input>
-                    {/* <div className="billEditDel">
-                        <button className="billEdit" onClick={() => { navigate(`/bills/edit/${bill.id}`) }}>&#9998;</button>
-                        <button className="billDel" onClick={handleDelete}>&#128465;</button>
-                    </div> */}
                 </div>
             </div>
             <div className="billList-bottomHalf">
                 <p className="billDateText">DUE:&nbsp; <span className="billDate">{billDueDate}</span></p>
                 
-                <button className="detailsText">DETAILS&nbsp;<span className="detailsArrow">&#9654;</span></button>
+                <button className="detailsText">
+                    <u>SHOW DETAILS</u>&nbsp;<span className="detailsArrow">&#9654;</span>
+                </button>
+                <button className="detailsText">
+                    <u>HIDE DETAILS</u>&nbsp;<span className="detailsArrow">&#9660;</span>
+                </button>
                     {/* Show-Hide details when button above is clicked */}
                     <div className="billDetails">
                         <p className="billType">BILL TYPE:&nbsp; <span className="billTypeName">{typeOfBill?.name}</span></p>

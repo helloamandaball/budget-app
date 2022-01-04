@@ -17,18 +17,18 @@ export const PaidList = () => {
   return (
     <>
       <div className="billsPaidContainer">
-        <h4>Paid Bills:</h4>
+        <h2>PAID</h2>
         <div className="billsPaidList">
           <table className="billsPaid">
             <tbody>
-              <tr>
+              {/* <tr>
                 <td className="billNameColumn"><em>Bill:</em></td>
                 <td className="billDateColumn"><em>Due Date:</em></td>
                 <td className="billPaidColumn"><em>Paid:</em></td>
-              </tr>
+              </tr> */}
                 {
                   //returns the bill Complete Card after filters/sorts by date
-                  bills.filter(bill => bill.complete === true).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => 
+                  bills.filter(bill => bill.paid === true).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => 
                   <PaidCard key={bill.id} bill={bill} />)
                 }
             </tbody>

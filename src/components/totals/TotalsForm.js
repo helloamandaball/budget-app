@@ -42,7 +42,7 @@ export const TotalsForm = () => {
     
     return (
         <form className="totalsForm">
-            <h2 className="">Edit Total</h2>
+            <h2 className="">EDIT TOTAL</h2>
             <fieldset>
                 <p className="totalBudget">Total Budget: $<input type="number" id="amount" name="amount" className="totalAmount"></input></p>
             </fieldset>
@@ -52,7 +52,7 @@ export const TotalsForm = () => {
                     event.preventDefault() // Prevent browser from submitting the form and refreshing the page
                     handleUpdateTotal()
                 }}>
-                Save
+                SAVE
             </button>
         </form>
     )

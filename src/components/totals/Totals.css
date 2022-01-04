@@ -8,10 +8,15 @@
     margin:0;
 }
 
+.totalsBox {
+    display: flex;
+}
+
 .totals {
     width: 100%;
     max-width: 350px;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 .totalsListContainer {
