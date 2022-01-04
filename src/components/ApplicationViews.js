@@ -3,15 +3,15 @@ import { Route, Routes } from "react-router-dom";
 import { Dashboard } from "./dashboard/Dashboard"
 import { BudgetList } from "./budgets/BudgetList"
 import { BudgetForm } from "./budgets/BudgetForm";
+import { BudgetsProvider } from "./budgets/BudgetDataProvider";
 import { BillsList } from "./bills/BillsList";
-import { BillsProvider } from "./bills/BillsDataProvider";
 import { BillForm } from "./bills/BillForm";
+import { BillsProvider } from "./bills/BillsDataProvider";
 import { BillTypesProvider } from "./bills/BillTypesDataProvider";
 import { TotalsList } from "./totals/TotalsList";
 import { TotalsForm } from "./totals/TotalsForm"
 import { PaidList } from "./paid/PaidList"
 import { PaidEditForm } from "./paid/PaidEditForm";
-import { BudgetsProvider } from "./budgets/BudgetDataProvider";
 
 //ApplicationViews renders the function based on the web address
 export const ApplicationViews = () => {

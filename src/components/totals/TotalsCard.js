@@ -12,9 +12,9 @@ export const TotalsCard = ({ budget }) => {
 
     const totalBudget = () => {
         // total amount is pulled from the budget table {budgets.amount}
-        let budgetAmount = budgets.filter(budgetId => budgetId.id).map(budget => budget.amount).length
+        let budgetAmount = budgets.filter(budgetId => budgetId.id).map(budget => budget.amount)
             console.log("budget amount:", budgetAmount)
-            return budgetAmount.toFixed(2)
+            return budgetAmount
     };
     
     const totalPending = () => {
@@ -60,7 +60,7 @@ export const TotalsCard = ({ budget }) => {
         }
             // console.log("this is the sum amount:", sum)
 
-        let remTotal = sum -= totalBudget.length;
+        let remTotal = sum -= totalBudget();
             // for (let i = 0; i < remTotal.length; i++){
             //     sum -= remTotal[i]
             // }

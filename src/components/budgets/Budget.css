@@ -16,7 +16,113 @@
 
 /* Add Budget */
 .startBudget {
+    background-color: #eef1f5;
     display: flex;
     justify-content: flex-start;
-    margin-top: 10px;
+    padding: 10px 0px;
+    margin: 0px 0px 30px;
+}
+
+.startBudgetList {
+    background-color: transparent;
+    width: 130px;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    padding: 4px 24px 0px 26px;
+}
+
+    .addBudgetBtn {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        height: 28px;
+        width: 120px;
+        color: #3863a0;
+        background-color: #61e5b4;
+        border: 1px solid #8fec9b;
+        border-radius: 2px;
+        box-shadow: 1px 2px 8px #d4d4d4;
+        padding: 1px 5px 2px;
+        margin: 0 0 4px;
+    }
+
+    .addBudgetBtn:hover{
+        color: #fff;
+        border-color: #5cbfed;
+        background-color: #5cbfed;
+        padding-bottom: 0px;
+    }
+
+    .selectBudget {
+        background-color: transparent;
+        padding-bottom: 1px;
+        margin-bottom: 0px;
+    }
+
+    .selectBudgetDropdown {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        height: 28px;
+        width: 200px;
+        background-color: #d1e7f1;
+        /* border: 1px solid #9fafc1; */
+        border: none;
+        border-radius: 3px;
+        /* box-shadow: 1px 2px 8px #d4d4d4; */
+        padding: 0 0 2px 5px;
+    }
+
+    /* .selectBudgetDropdown:hover {
+        color: #FFF;
+        background-color: #9fafc1;
+        border: none;
+    } */
+
+    .bold {
+        font-weight: 500;
+        font-style: italic;
+    }
+
+/* Month-Year Tab */
+ h4 {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    padding:0;
+    margin: 0;
+}
+
+.budgetMoYr {
+    height: 40px;
+    padding: 6px 0;
+    margin: auto 0;
+}
+
+.tab {
+    height: 50px;
+    width: 120px;
+    background-color: #cdf5de;
+    border-top: 1px solid #cdf5de;
+    border-right: 1px solid #cdf5de;
+    border-left: 1px solid #cdf5de;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0px 0px 0px;
+    margin:0 0 0 26px;
+}
+
+.moYrTab {
+    border-bottom: 5px solid #cdf5de;
 }

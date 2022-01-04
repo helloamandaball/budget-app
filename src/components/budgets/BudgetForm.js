@@ -68,7 +68,7 @@ export const BudgetForm = () => {
                 <div className="form-group">
                     <label htmlFor="month">Month &amp; Year: </label>
                     <input type="month" id="month" name="month" required autoFocus className="form-control"
-                        placeholder=""
+                        placeholder="Choose"
                         onChange={handleControlledInputChange}
                         defaultValue={budget.month} />
                 </div>
