@@ -90,7 +90,7 @@ export const BillForm = () => {
                     $<input type="number" id="amount" name="amount" required className="form-control"
                         placeholder="Amount due"
                         onChange={handleControlledInputChange}
-                        defaultValue={bill.amount.toFixed(2)} />
+                        defaultValue={bill.amount} />
                 </div>
             </fieldset>
             <fieldset>

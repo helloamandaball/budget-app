@@ -10,7 +10,7 @@ import "./NavBar.css"
 //
 export const NavBar = (props) => {
     const [navBarMenu, setNavBarMenu] = useState(false);
-    const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
+    // const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
 
 
     return (
@@ -19,11 +19,13 @@ export const NavBar = (props) => {
                 <div className="menuIconDiv">
                     <Link to='#' className="hamburgerMenuIcon">
                         {/* <img src={menuIcon} alt="menu icon" className="menuIcon" /> */}
-                        &#x2630;
+                        {/* &#x2630; */}
                     </Link>
                 </div>
                 <div className="hdrTitleDiv">
-                    <h2>Budget Tracker</h2>
+                    <Link to="/" className="hdrTitle">
+                        <h2 className="hdrTitle">Budget Tracker</h2>
+                    </Link>
                 </div>
                 <div className="logoutBtnDiv">
                     <Link className="logout" to="/budgets/create/">
@@ -31,13 +33,12 @@ export const NavBar = (props) => {
                     </Link>
                 </div>
             </div>
-            <nav className={navBarMenu ? 'navBar active' : 'navBar'}>
+            {/* <nav className={navBarMenu ? 'navBar active' : 'navBar'}>
                 <ul className="navList">
                     <li className="navBtn">
                         <Link className="addBudget" to="/budgets/create/">
                             <button className="addBudgetBtn">NEW BUDGET+</button>
                         </Link>
-
                     </li>
                     <li className="navItem">
                         <Link className="navLink" to="/months">CURRENT MONTH</Link>
@@ -53,9 +54,9 @@ export const NavBar = (props) => {
                     </li>
                     <li className="navItem-search">
                         <form action="/" method="get" className="searchBox">
-                            {/* <label htmlFor="header-search">
+                            <label htmlFor="header-search">
                                 <span className="visually-hidden">Search</span>
-                            </label> */}
+                            </label>
                             <img src={searchIcon} alt="search icon" className="searchIcon" />
                             <input className="searchInput"
                                 type="text"
@@ -66,7 +67,7 @@ export const NavBar = (props) => {
                         </form>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
         </>
     )
 }

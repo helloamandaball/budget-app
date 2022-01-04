@@ -26,18 +26,18 @@ export const PaidCard = ({ bill }) => {
         // const billDueDate = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' }).format(formattedDate)
 
     return ( 
-        <tr key = { bill.id }>
+        <tr key = {bill.id}>
             <td className = "billPaidColumn checkedBillBox-checked">
-                <input type = "checkbox" checked = { bill.paid }
+                <input type = "checkbox" checked = {bill.paid}
                 name = "checkedBill"
                 id = "checkedBill"
                 className = "checkedBillBox-checked"
                 onChange = {() => handleCheckedAsCompleted(bill)}
-                value = { bill.paid }></input> 
+                value = {bill.paid}></input> 
             </td> 
-            <td className = "paidBillNameColumn">{ bill.name }</td>  
-            <td className = "paidBillDateColumn">{ billDueDate }</td> 
-            <td className = "paidBillAmountColumn">$ { bill.amount.toFixed(2) }</td>
+            <td className = "paidBillNameColumn">{bill.name}</td>  
+            <td className = "paidBillDateColumn">{billDueDate}</td> 
+            <td className = "paidBillAmountColumn">${bill.amount.toFixed(2)}</td>
             <td className="paidBillEditDel">
                 <button className="paidBillEdit" onClick={() => { navigate(`/paid/edit/${bill.id}`) }}>&#9998;</button>
                 <button className="paidBillDel" onClick={handleDelete}>&#128465;</button>

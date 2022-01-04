@@ -20,7 +20,7 @@ export const TotalsForm = () => {
                 id: budget.id,
                 amount: parseInt(budget.amount),
             })
-                .then(() => navigate(`/budgets/${budget.id}`))
+                .then(() => navigate(`/`))
         }
     }
 
@@ -42,7 +42,7 @@ export const TotalsForm = () => {
     
     return (
         <form className="totalsForm">
-            <h2 className="">EDIT TOTAL</h2>
+            <h2 className="">EDIT BUDGET TOTAL</h2>
             <fieldset>
                 <p className="totalBudget">Total Budget: $<input type="number" id="amount" name="amount" className="totalAmount"></input></p>
             </fieldset>

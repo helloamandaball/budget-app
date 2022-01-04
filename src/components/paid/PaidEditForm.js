@@ -33,10 +33,10 @@ export const PaidEditForm = () => {
                     date: bill.date,
                     amount: parseInt(bill.amount),
                     memo: bill.memo,
-                    paid: false,
+                    paid: true,
                     typeId: parseInt(bill.typeId)
                 })
-                    .then(() => navigate(`/bills/${bill.id}`))
+                    .then(() => navigate(`/`))
             } 
         }
     }
