@@ -34,9 +34,10 @@ export const BillForm = () => {
                     amount: parseInt(bill.amount),
                     memo: bill.memo,
                     paid: false,
-                    typeId: parseInt(bill.typeId)
+                    typeId: parseInt(bill.typeId),
+                    userId: +localStorage.activeUser
                 })
-                    .then(() => navigate(`/bills/${bill.id}`))
+                    .then(() => navigate(`/`))
             } else {
                 //POST - add new bill
                 addBill({
@@ -46,9 +47,10 @@ export const BillForm = () => {
                     memo: bill.memo,
                     paid: false,
                     typeId: parseInt(bill.typeId),
-                    // budgetId: parseInt(bill.budgetId)
+                    // budgetId: parseInt(bill.budgetId),
+                    userId: +localStorage.activeUser
                 })
-                    .then(() => navigate("/bills"))
+                    .then(() => navigate("/"))
             }
         }
     }
@@ -74,6 +76,9 @@ export const BillForm = () => {
             <h2 className="billForm__title">
                 {billId ? <>EDIT BILL</> : <>NEW BILL</>}
             </h2>
+            <button className="cancelBtn" onClick={() => navigate("/")}>
+                X
+            </button>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Bill name: </label>

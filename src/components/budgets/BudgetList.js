@@ -1,19 +1,27 @@
 import React, { useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { BudgetContext } from "../budgets/BudgetDataProvider"
 import "./Budget.css"
 
 export const BudgetList = () => {
-    const { budgets, getBudgets } = useContext(BudgetContext)
+    const { budgets, getBudgets, deleteBudget } = useContext(BudgetContext)
+
+    const navigate = useNavigate();
     
     useEffect(() => {
         getBudgets()
       }, [])
 
-    const handleControlledInputChange = (event) => {
-
+    //Use for delete:
+    const handleDelete = () => {
+        deleteBudget(budgets.id)
+            .then(getBudgets)
     }
-
+    
+    //Use to format date into MM/DD/YYYY
+    // const formattedDate = new Date(budget.date));
+    // const budgetDate = new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', year: 'numeric', month: 'short'}).format(formattedDate)
 
     return (
         <>
@@ -25,30 +33,31 @@ export const BudgetList = () => {
                         </Link>
                     </li>
                 </ul>
-                <fieldset>
-                    <div className="selectBudget">
-                        {/* <label htmlFor="selectBudget">Select Existing Budget</label> */}
-                        <select defaultValue={1} name="selectBudget" id="selectBudget" className="selectBudgetDropdown"
-                        onChange={handleControlledInputChange} >
-                            <option value="0" className="bold">View An Existing Budget</option>
-                            {/* Sort months alphabetically by name (moA, moB), then sort by year (yr1, yr2) */}
-                            {budgets.sort((moA,moB) => {return moA.month.localeCompare(moB.month)}).sort((yr1,yr2) => {return new Date(yr1.year) - new Date (yr2.year)}).map(budgetSelection => (
-                                <option key={budgetSelection.id} value={budgetSelection.id}>
-                                    {budgetSelection.month}&nbsp;{budgetSelection.year}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                </fieldset>
+                {/* Dropbox for budget select can go here - see extras.txt */}
             </section>
-            <section className="moYrTab">
-                <div className="tab">
-                    <div className="budgetMoYr">
-                        <h4>{budgets.map(budget => budget.month)}</h4>
-                        <h4>{budgets.map(budget => budget.year)}</h4>
-                    </div>
-                </div>
+            <section className="budgetDiv">
+                <div className="spacer">&nbsp;</div>
+                {budgets.map(budget => {
+                    return (  
+                        <>
+                            <div className="moYrTab">
+                                <Link className="tabLink" to='/budgets'>
+                                    <div className="moYrText">
+                                        <h4>{budget.month}</h4>
+                                        <h4>{budget.year}</h4>
+                                    </div>
+                                </Link>
+                                <div className="budgetEditDel">
+                                    <button className="budgetEdit" onClick={() => { navigate(`/budgets/edit/${budget.id}`) }}>&#9998;</button>
+                                    <button className="budgetDel" onClick={handleDelete}>&#128465;</button>
+                                </div>
+                            </div>
+                        </>
+                    )
+                })}
             </section>
+            <div className="hr">
+            </div>
         </>
     )
 

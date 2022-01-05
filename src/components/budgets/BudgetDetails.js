@@ -6,22 +6,22 @@ import { BillsList } from "../bills/BillsList"
 import { PaidList } from "../paid/PaidList"
 import "./Budget.css"
 
-export const BudgetDetails = () => {
-
+export const BudgetDetails = ({budget}) => {
+// run useEffect?
     return (
         <>
             <div className="flex-row-reverse">
                 <div className="rightColumn">
-                    <TotalsList />
+                    <TotalsList key={budget.id}/>
                 </div>
                 <div className="leftColumn">
-                    <BillsList />
-                    <PaidList />
+                    <BillsList key={budget.id}/>
+                    <PaidList key={budget.id}/>
                 </div>
             </div>
             <div className="">
                 NOTES GO HERE.
             </div>
-    </>
+        </>
     )
 }

@@ -34,7 +34,8 @@ export const PaidEditForm = () => {
                     amount: parseInt(bill.amount),
                     memo: bill.memo,
                     paid: true,
-                    typeId: parseInt(bill.typeId)
+                    typeId: parseInt(bill.typeId),
+                    userId: +localStorage.activeUser
                 })
                     .then(() => navigate(`/`))
             } 
@@ -60,6 +61,9 @@ export const PaidEditForm = () => {
     return (
         <form className="billForm">
             <h2 className="billForm__title">EDIT PAID BILL</h2>
+            <button className="cancelBtn" onClick={() => navigate("/")}>
+                X
+            </button>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Bill name: </label>

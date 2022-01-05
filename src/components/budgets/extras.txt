@@ -1,0 +1,29 @@
+            // Dropdown menu for budget select that can go in BudgetList.js, if needed.
+
+                const handleControlledInputChange = (event) => {
+                    //code to handle dropdown from below goes here.
+                }
+
+                <fieldset>
+                    <div className="selectBudget">
+                        <select defaultValue={1} name="selectBudget" id="selectBudget" className="selectBudgetDropdown"
+                        onChange={handleControlledInputChange} >
+                            <option value="0" className="">View An Existing Budget</option>
+                            {/* Sort months alphabetically by name (moA, moB), then sort by year (yr1, yr2) */}
+                            {budgets.sort((monthA,monthB) => {return monthA.month.localeCompare(monthB.month)}).sort((yr1,yr2) => {return new Date(yr1.year) - new Date (yr2.year)}).map(budgetSelection => (
+                                <option key={budgetSelection.id} value={budgetSelection.id}>
+                                    {budgetSelection.month}&nbsp;{budgetSelection.year}
+                                </option>
+                            ))}
+                            {/* {budgets.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(budget => (
+                                <option key={budget.id} value={budget.id}>
+                                    {budgetDate}
+                                </option>
+                            ))} */}
+                        </select>
+                    </div>
+                </fieldset>
+
+
+                {/* <h4>{budgets.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(budget => budget.date)}</h4>
+                                        <h4>{budgetDate}</h4> */}

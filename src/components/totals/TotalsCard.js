@@ -13,7 +13,7 @@ export const TotalsCard = ({ budget }) => {
     const totalBudget = () => {
         // total amount is pulled from the budget table {budgets.amount}
         let budgetAmount = budgets.filter(budgetId => budgetId.id).map(budget => budget.amount)
-            console.log("budget amount:", budgetAmount)
+            // console.log("budget amount:", budgetAmount)
             return budgetAmount
     };
     
@@ -64,7 +64,7 @@ export const TotalsCard = ({ budget }) => {
             // for (let i = 0; i < remTotal.length; i++){
             //     sum -= remTotal[i]
             // }
-            console.log("remaining amount:", remTotal)
+            // console.log("remaining amount:", remTotal)
             return remTotal.toFixed(2)
     }
 
@@ -83,9 +83,9 @@ export const TotalsCard = ({ budget }) => {
                     <p className="totalPaid">Paid:&nbsp; $<span className="paidAmount">{totalPaid()}</span></p>
                     <p className="totalRemaining">Remaining:&nbsp; $<span className="remainingAmount">{totalRemaining()}</span></p>
                 </div>
-                <div className="totalsEdit">
+                {/* <div className="totalsEdit">
                 <button className="totalsEditBtn" onClick={() => { navigate(`/totals/edit/${budget.id}`) }}>&#9998;</button>              
-                </div>
+                </div> */}
             </div> 
         </section>
     )

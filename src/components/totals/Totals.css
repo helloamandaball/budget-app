@@ -106,3 +106,25 @@
         background-color: transparent;
         color: #798da3;
     } 
+
+/* Form Styling */
+.cancelBtn{
+    background-color: #5cbfed;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height:28px;
+    width: 28px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #cfcfcf;
+    padding: 0 1px 0 0;
+    margin: 5px 24px 5px auto;
+}
+    .cancelBtn:hover {
+        background-color: #61e5b4;
+    }

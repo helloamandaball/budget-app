@@ -16,11 +16,11 @@
 
 /* Add Budget */
 .startBudget {
-    background-color: #eef1f5;
+    /* background-color: #eef1f5; */
     display: flex;
     justify-content: flex-start;
     padding: 10px 0px;
-    margin: 0px 0px 30px;
+    margin: 10px 0px 15px;
 }
 
 .startBudgetList {
@@ -42,22 +42,22 @@
     .addBudgetBtn {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 600;
         height: 28px;
-        width: 120px;
-        color: #3863a0;
-        background-color: #61e5b4;
-        border: 1px solid #8fec9b;
+        width: 140px;
+        color: #FFF;
+        border-color: #5cbfed;
+        background-color: #5cbfed;
         border-radius: 2px;
         box-shadow: 1px 2px 8px #d4d4d4;
-        padding: 1px 5px 2px;
+        padding: 1px 5px 0px;
         margin: 0 0 4px;
     }
 
     .addBudgetBtn:hover{
-        color: #fff;
-        border-color: #5cbfed;
-        background-color: #5cbfed;
+        color: #3863a0;
+        background-color: #61e5b4;
+        border: 1px solid #8fec9b;
         padding-bottom: 0px;
     }
 
@@ -93,36 +93,142 @@
     }
 
 /* Month-Year Tab */
- h4 {
+.tabLink {
+    text-decoration: none;
+}
+
+.budgetDiv {
+    display: flex;
+    border-bottom: 5px solid #cdf5de;
+}
+
+.spacer{
+    width:1px;
+    height: 1px;
+    margin-left: 24px;
+}
+
+h4 {
     color: #798da3;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     line-height: normal;
     text-align: center;
+    text-decoration: none;
     padding:0;
     margin: 0;
 }
 
-.budgetMoYr {
-    height: 40px;
-    padding: 6px 0;
-    margin: auto 0;
+.tabLink {
+    margin:0;
+    padding:0;
+    text-decoration: none;
 }
 
-.tab {
+.moYrTab {
+    display: flex;
     height: 50px;
-    width: 120px;
+    width: 140px;
     background-color: #cdf5de;
     border-top: 1px solid #cdf5de;
     border-right: 1px solid #cdf5de;
     border-left: 1px solid #cdf5de;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    padding: 0px 0px 0px;
-    margin:0 0 0 26px;
+    padding: 0;
+    margin:0 0 0 3px;
+}
+/* .moYrTab:hover{
+    background-color: #61e5b4;
+} */
+
+.moYrTab-Dimmed {
+    display: flex;
+    height: 50px;
+    width: 140px;
+    background-color: #eef1f5;
+    border-top: 1px solid #eef1f5;
+    border-right: 1px solid #eef1f5;
+    border-left: 1px solid #eef1f5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0;
+    margin:0 0 0 3px;
 }
 
-.moYrTab {
-    border-bottom: 5px solid #cdf5de;
+    .moYrText {
+        height: 40px;
+        width: 100px;
+        padding: 6px 0 6px 12px;
+        margin: 0
+    }
+
+/* Edit & Delete Buttons */
+.budgetEditDel {
+    width: 24px;
+    text-align: right;
+    margin-top: auto;
+    margin-bottom:0px;
 }
+
+.budgetEdit {
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #88e2c1;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.budgetDel {
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #88e2c1;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 20px;
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+
+.budgetEdit:hover, .budgetDel:hover, .editTxt:hover {
+    background-color: transparent;
+    color: #798da3;
+} 
+
+/* .editTxt {
+    color: #c9d3dd;
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+} */
+    
+
+/* Form Styling */
+.cancelBtn{
+    background-color: #5cbfed;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height:28px;
+    width: 28px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #cfcfcf;
+    padding: 0 1px 0 0;
+    margin: 5px 24px 5px auto;
+}
+    .cancelBtn:hover {
+        background-color: #61e5b4;
+    }
