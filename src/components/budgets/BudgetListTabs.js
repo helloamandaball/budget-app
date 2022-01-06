@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import { BudgetContext } from "../budgets/BudgetDataProvider"
+import { BudgetContext } from "./BudgetDataProvider"
 import "./Budget.css"
 
-export const BudgetList = () => {
+export const BudgetListTabs = ({setSelectedBudget}) => {
     const { budgets, getBudgets, deleteBudget } = useContext(BudgetContext)
 
     const navigate = useNavigate();
@@ -18,10 +18,6 @@ export const BudgetList = () => {
         deleteBudget(budgets.id)
             .then(getBudgets)
     }
-    
-    //Use to format date into MM/DD/YYYY
-    // const formattedDate = new Date(budget.date));
-    // const budgetDate = new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', year: 'numeric', month: 'short'}).format(formattedDate)
 
     return (
         <>
@@ -41,23 +37,23 @@ export const BudgetList = () => {
                     return (  
                         <>
                             <div className="moYrTab">
-                                <Link className="tabLink" to='/budgets'>
+                                <div className="tabLink" onClick={() => setSelectedBudget(budget.id)}>
                                     <div className="moYrText">
                                         <h4>{budget.month}</h4>
                                         <h4>{budget.year}</h4>
                                     </div>
-                                </Link>
-                                <div className="budgetEditDel">
-                                    <button className="budgetEdit" onClick={() => { navigate(`/budgets/edit/${budget.id}`) }}>&#9998;</button>
-                                    <button className="budgetDel" onClick={handleDelete}>&#128465;</button>
                                 </div>
+                                    <div className="budgetEditDel">
+                                        <button className="budgetEdit" onClick={() => { navigate(`/budgets/edit/${budget.id}`) }}>&#9998;</button>
+                                        <button className="budgetDel" onClick={handleDelete}>&#128465;</button>
+                                    </div>
                             </div>
                         </>
                     )
                 })}
             </section>
-            <div className="hr">
-            </div>
+            {/* <div className="hr">
+            </div> */}
         </>
     )
 

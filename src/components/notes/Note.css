@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+/* Note List */
+.noteContainer {
+
+}
+
+.noteList {
+
+}
+
+.note {
+
+}
+
+
+/* Note Card */
+.noteTitle {
+    font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    line-height: normal;
+    font-weight: normal;
+    font-kerning: normal;
+    letter-spacing: normal;
+    color: #798da3;
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
+.noteDate {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #798da3;
+    margin-top: 0;
+}
+
+.noteMemo {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: normal;
+    font-weight: 500;
+    color: #798da3;
+    /* border-top: 1px dotted #c9d3dd;
+    border-radius: 3px;  */
+    padding: 5px 10px 5px 5px;
+    margin: 0 0 3px 0;
+}
+
+.noteEdit, .noteDel {
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    color: #c9d3dd;
+    width: 24px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.noteEdit:hover, .noteDel:hover {
+    background-color: transparent;
+    color: #798da3;
+} 
+
+.noteEditDel {
+    text-align: right;
+    margin-top: auto;
+    margin-bottom:10px;
+}

@@ -87,14 +87,6 @@ export const BudgetForm = () => {
                     </select>
                 </div>
             </fieldset>
-            {/* <fieldset>
-                <div className="form-group">
-                    <label htmlFor="date">Month &amp; Year: </label>
-                    <input type="month" id="date" name="date" required autoFocus className="form-control"
-                        onChange={handleControlledInputChange}
-                        defaultValue={budget.date} />
-                </div>
-            </fieldset> */}
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="year">Year: </label>

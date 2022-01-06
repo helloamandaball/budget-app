@@ -1,85 +1,61 @@
 import React, { useState, createContext } from "react"
 
 // The context is imported and used by individual components that need data
-export const BillsContext = createContext()
+export const NotesContext = createContext()
 
 // This component establishes what data can be used.
-export const BillsProvider = (props) => {
-    const [bills, setBills] = useState([])
+export const NotesProvider = (props) => {
+    const [notes, setNotes] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
 
-    const getBills = () => {
-        return fetch("http://localhost:8088/bills")
+    const getNotes = () => {
+        return fetch("http://localhost:8088/notes")
             .then(res => res.json())
-            .then(setBills)
+            .then(setNotes)
     }
 
-    const addBill = billObj => {
-        return fetch("http://localhost:8088/bills", {
+    const addNote = noteObj => {
+        return fetch("http://localhost:8088/notes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(billObj)
+            body: JSON.stringify(noteObj)
         })
             .then(response => response.json())
     }
 
-    const getBillById = (id) => {
-        return fetch(`http://localhost:8088/bills/${id}`)
+    const getNoteById = (id) => {
+        return fetch(`http://localhost:8088/notes/${id}`)
             .then(res => res.json())
     }
 
-    //boolean is assigned a variable that can then be told its true or false elsewhere (true in BillCard for incomplete note list, false in BillList for the paid bills list)
-    const paidBill = (billId, isPaid) => {
-        return fetch(`http://localhost:8088/bills/${billId}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ paid: isPaid })
-        })
-            .then(getBills)
-    }
-
-    // boolean is set to true in this version:
-    // const paidBill = (billId) => {
-    //     return fetch(`http://localhost:8088/bills/${billId}`, {
-    //         method: "PATCH",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({paid: true}) 
-    //     })
-    //     .then(getBills)
-    // }
-
-    const deleteBill = billId => {
-        return fetch(`http://localhost:8088/bills/${billId}`, {
+    const deleteNote = noteId => {
+        return fetch(`http://localhost:8088/notes/${noteId}`, {
             method: "DELETE"
         })
-            .then(getBills)
+            .then(getNotes)
     }
 
-    const updateBill = note => {
-        return fetch(`http://localhost:8088/bills/${note.id}`, {
+    const updateNote = note => {
+        return fetch(`http://localhost:8088/notes/${note.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(note)
         })
-            .then(getBills)
+            .then(getNotes)
     }
 
     return (
-        <BillsContext.Provider value={
+        <NotesContext.Provider value={
             {
-                bills, addBill, getBills, getBillById, deleteBill, updateBill, paidBill, searchTerms, setSearchTerms
+                notes, addNote, getNotes, getNoteById, deleteNote, updateNote, searchTerms, setSearchTerms
             }
         }>
             {props.children}
-        </BillsContext.Provider>
+        </NotesContext.Provider>
     )
 
 }

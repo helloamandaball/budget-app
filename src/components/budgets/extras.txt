@@ -25,5 +25,30 @@
                 </fieldset>
 
 
-                {/* <h4>{budgets.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(budget => budget.date)}</h4>
-                                        <h4>{budgetDate}</h4> */}
+
+            //Dropdown for form edit, if input="month" was being used:
+            
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="date">Month &amp; Year: </label>
+                        <input type="month" id="date" name="date" required autoFocus className="form-control"
+                            onChange={handleControlledInputChange}
+                            defaultValue={budget.date} />
+                    </div>
+                </fieldset>
+
+
+
+            //Sort/Display of Budget's date (month/year only) if above input="month" was used in the form, but this would go into the List file:
+
+                <h4>{budgets.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(budget => budget.date)}</h4>
+
+
+
+            //Date format of the input="month" data from the api:
+
+                //Use to format date into MM/DD/YYYY
+                    const formattedDate = new Date(budget.date));
+                    const budgetDate = new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', year: 'numeric', month: 'short'}).format(formattedDate)
+                                        
+                            <h4>{budgetDate}</h4>

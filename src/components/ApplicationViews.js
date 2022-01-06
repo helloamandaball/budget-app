@@ -1,7 +1,7 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom";
 import { Dashboard } from "./dashboard/Dashboard"
-import { BudgetList } from "./budgets/BudgetList"
+import { BudgetListTabs } from "./budgets/BudgetListTabs"
 import { BudgetForm } from "./budgets/BudgetForm";
 import { BudgetDetails } from "./budgets/BudgetDetails";
 import { BudgetsProvider } from "./budgets/BudgetDataProvider";
@@ -13,6 +13,8 @@ import { TotalsList } from "./totals/TotalsList";
 // import { TotalsForm } from "./totals/TotalsForm"
 import { PaidList } from "./paid/PaidList"
 import { PaidEditForm } from "./paid/PaidEditForm";
+import { NoteList } from "./notes/NoteList";
+import { NoteForm } from "./notes/NoteForm"
 
 //ApplicationViews renders the function based on the web address
 export const ApplicationViews = () => {
@@ -25,7 +27,7 @@ export const ApplicationViews = () => {
                     
                 <Route path="/" element={<Dashboard />} />
 
-                <Route path="budgets/*" element={<BudgetList />} />
+                <Route path="budgets/*" element={<BudgetListTabs />} />
                 <Route path="budgets/create/*" element={<BudgetForm />} />
                 <Route path="budgets/edit/:budgetId/*" element={<BudgetForm />} />
                 <Route path="budgets/detail/:budgetId/*" element={<BudgetDetails />} />
@@ -40,6 +42,9 @@ export const ApplicationViews = () => {
 
                 <Route path="paid/*" element={<PaidList />} />
                 <Route path="paid/edit/:billId/*" element={<PaidEditForm />} />
+
+                <Route path="notes/*" element={<NoteList />} />
+                <Route path="notes/edit/:noteId/*" element={<NoteForm />} />
 
             </Routes>
         </BillTypesProvider>

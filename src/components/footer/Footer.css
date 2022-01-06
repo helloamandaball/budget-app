@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width: 100vw;
+    background-color: #FFF;
+    padding: 10px 0 15px;
+    margin-top: 30px;
+}
+
+    .footer {
+        background-color: #FFF;
+        border-top: 1px solid #eef1f5;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footerDiv {
+        display: flex;
+        margin: 0 0 0 auto;
+    }
+
+    .byLogoImg {
+        width: 60px;
+        height: auto;
+        margin: 5px 26px 5px 7px;
+    }
+
+    .footerText {
+        /* font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif; */
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: right;
+        color: #9fafc1;
+        margin: 12px 0px 0px;
+    }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router";
 import { NavBar } from "./nav/NavBar";
 import { ApplicationViews } from "./ApplicationViews";
+import { Footer } from "./footer/Footer";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register"
 import "./BudgetApp.css";
@@ -17,6 +18,7 @@ export const BudgetApp = () => {
       <>
         <NavBar />
         <ApplicationViews />
+        <Footer />
       </>
     );
   } else {

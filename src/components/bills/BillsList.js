@@ -1,8 +1,9 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { BillsContext } from "./BillsDataProvider"
 import { BillTypesContext } from "./BillTypesDataProvider"
 import { BillCard } from "./BillCard"
+import { BillForm } from "./BillForm"
 import "./Bills.css"
 // import { type } from "@testing-library/user-event/dist/type"
 
@@ -11,6 +12,8 @@ export const BillsList = () => {
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
 
     const navigate = useNavigate()
+
+    // const [buttonPopup, setButtonPopup] = useState(false)
 
     useEffect (() => {
             // console.log("BillList: useEffect", getBills)
@@ -24,8 +27,10 @@ export const BillsList = () => {
                 <div className="billHdr">
                     <h2>BILLS</h2>
                     <button className="addBillBtn" onClick={() => navigate("/bills/create")}>
+                    {/* <button className="addBillBtn" onClick={() => setButtonPopup(true)}> */}
                         +
                     </button>
+                    {/* <BillForm trigger={buttonPopup} setTrigger={setButtonPopup}/> */}
                 </div>
                 <div className="bills">
                         {/* {console.log("BillList: Render", bills)} */}

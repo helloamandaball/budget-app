@@ -4,23 +4,22 @@ import { Link } from "react-router-dom"
 // import { Nav } from "react-bootstrap"
 // import Button from 'react-bootstrap/Button';
 // import menuIcon from ".././images/menuIcon.png"
-import searchIcon from ".././images/searchIcon.png"
+// import searchIcon from ".././images/searchIcon.png"
 import "./NavBar.css"
 
 //
 export const NavBar = (props) => {
-    const [navBarMenu, setNavBarMenu] = useState(false);
+    // const [navBarMenu, setNavBarMenu] = useState(false);
     // const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
-
 
     return (
         <>
             <div className="hdrNavBar">
                 <div className="menuIconDiv">
-                    <Link to='#' className="hamburgerMenuIcon">
-                        {/* <img src={menuIcon} alt="menu icon" className="menuIcon" /> */}
-                        {/* &#x2630; */}
-                    </Link>
+                    {/* <Link to='#' className="hamburgerMenuIcon">
+                        <img src={menuIcon} alt="menu icon" className="menuIcon" />
+                        &#x2630;
+                    </Link> */}
                 </div>
                 <div className="hdrTitleDiv">
                     <Link to="/" className="hdrTitle">

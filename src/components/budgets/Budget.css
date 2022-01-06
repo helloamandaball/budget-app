@@ -96,6 +96,9 @@
 .tabLink {
     text-decoration: none;
 }
+    .tabLink:hover{
+        cursor:pointer;
+    }
 
 .budgetDiv {
     display: flex;
