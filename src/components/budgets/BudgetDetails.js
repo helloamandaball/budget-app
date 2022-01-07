@@ -4,8 +4,8 @@ import { TotalsList } from "../totals/TotalsList"
 import { BillsList } from "../bills/BillsList"
 import { PaidList } from "../paid/PaidList"
 import { NoteList } from "../notes/NoteList"
-import { BudgetContext } from "./BudgetDataProvider"
 import { NotesContext } from "../notes/NoteDataProvider"
+import { BudgetContext } from "./BudgetDataProvider"
 import "./Budget.css"
 
 export const BudgetDetails = ({selectedBudget}) => {
@@ -16,15 +16,15 @@ const {budgets} = useContext(BudgetContext)
         <>
             <div className="flex-row-reverse">
                 <div className="rightColumn">
-                    {/* <TotalsList /> */}
+                    <TotalsList selectedBudget={selectedBudget} />
                 </div>
                 <div className="leftColumn">
-                    {budgets.filter(selectedBudget => selectedBudget.budgetId === selectedBudget.id).map(selectedBudget =>
-                        <BillsList selectedBudget={selectedBudget.id} />
-                    )}
-
-                    {/* <PaidList /> */}
+                    <BillsList selectedBudget={selectedBudget} />
+                    <PaidList selectedBudget={selectedBudget} />
                 </div>
+            </div>
+            <div className="">
+                <NoteList selectedBudget={selectedBudget} />
             </div>
         </>
     )

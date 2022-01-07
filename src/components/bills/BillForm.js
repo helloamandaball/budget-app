@@ -35,6 +35,7 @@ export const BillForm = () => {
                     memo: bill.memo,
                     paid: false,
                     typeId: parseInt(bill.typeId),
+                    budgetId: parseInt(bill.budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate(`/`))
@@ -47,7 +48,7 @@ export const BillForm = () => {
                     memo: bill.memo,
                     paid: false,
                     typeId: parseInt(bill.typeId),
-                    // budgetId: parseInt(bill.budgetId),
+                    budgetId: parseInt(bill.budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate("/"))

@@ -14,9 +14,16 @@ export const BudgetListTabs = ({setSelectedBudget}) => {
       }, [])
 
     //Use for delete:
+    // const handleDelete = () => {
+    //     deleteBudget(budgets.id)
+    //         .then(getBudgets)
+    // }
+
     const handleDelete = () => {
         deleteBudget(budgets.id)
-            .then(getBudgets)
+        .then(() => {
+            navigate("/")
+          })
     }
 
     return (
@@ -31,7 +38,7 @@ export const BudgetListTabs = ({setSelectedBudget}) => {
                 </ul>
                 {/* Dropbox for budget select can go here - see extras.txt */}
             </section>
-            <section className="budgetDiv">
+            <section className="budgetTabsDiv">
                 <div className="spacer">&nbsp;</div>
                 {budgets.map(budget => {
                     return (  

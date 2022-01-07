@@ -10,7 +10,6 @@ import { BillForm } from "./bills/BillForm";
 import { BillsProvider } from "./bills/BillsDataProvider";
 import { BillTypesProvider } from "./bills/BillTypesDataProvider";
 import { TotalsList } from "./totals/TotalsList";
-// import { TotalsForm } from "./totals/TotalsForm"
 import { PaidList } from "./paid/PaidList"
 import { PaidEditForm } from "./paid/PaidEditForm";
 import { NoteList } from "./notes/NoteList";
@@ -39,8 +38,6 @@ export const ApplicationViews = () => {
                 <Route path="bills/edit/:billId/*" element={<BillForm />} />
 
                 <Route path="totals/*" element={<TotalsList />} />
-                {/* <Route path="totals/create/*" element={<TotalsForm />} />
-                <Route path="billTotals/edit/:billId/*" element={<TotalsForm />} /> */}
 
                 <Route path="paid/*" element={<PaidList />} />
                 <Route path="paid/edit/:billId/*" element={<PaidEditForm />} />

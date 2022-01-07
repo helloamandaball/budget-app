@@ -20,6 +20,7 @@ export const NoteCard = ({ note }) => {
         // const noteDueDate = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' }).format(formattedDate)
 
     return ( 
+        <div className="noteList">
         <div className="noteSection" key={note.id}>
             <div className="note">
                 <div className="noteTitle">{note.title}</div>  
@@ -30,6 +31,7 @@ export const NoteCard = ({ note }) => {
                 <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${note.id}`) }}>&#9998;</button>
                 <button className="noteDel" onClick={handleDelete}>&#128465;</button>
             </div>
+        </div>
         </div>
     )
 }

@@ -31,7 +31,7 @@ export const BudgetsProvider = (props) => {
     }
 
     const deleteBudget = budgetId => {
-        return fetch(`http://localhost:8088/buddgets/${budgetId}`, {
+        return fetch(`http://localhost:8088/budgets/${budgetId}`, {
             method: "DELETE"
         })
             .then(getBudgets)

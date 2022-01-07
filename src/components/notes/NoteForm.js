@@ -27,6 +27,7 @@ export const NoteForm = () => {
                 title: note.title,
                 // date: note.date,
                 memo: note.memo,
+                // budgetId: parseInt(bill.budgetId),
                 userId: +localStorage.activeUser
             })
                 .then(() => navigate(`/`))
@@ -36,6 +37,7 @@ export const NoteForm = () => {
                 title: note.title,
                 // date: note.date,
                 memo: note.memo,
+                budgetId: parseInt(note.budgetId),
                 userId: +localStorage.activeUser
             })
                 .then(() => navigate("/"))

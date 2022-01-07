@@ -19,6 +19,7 @@ export const TotalsForm = () => {
             updateBudget({
                 id: budget.id,
                 amount: parseInt(budget.amount),
+                budgetId: parseInt(budget.budgetId),
                 userId: +localStorage.activeUser
             })
                 .then(() => navigate(`/`))

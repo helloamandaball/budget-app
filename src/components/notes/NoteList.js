@@ -4,7 +4,7 @@ import { NotesContext } from "./NoteDataProvider"
 import { NoteCard } from "./NoteCard"
 import "./Note.css"
 
-export const NoteList = () => {
+export const NoteList = ({selectedBudget}) => {
   const { notes, getNotes } = useContext(NotesContext)
 
   const navigate = useNavigate()
@@ -16,23 +16,19 @@ export const NoteList = () => {
 
   return (
     <>
-      <div className="noteContainer">
+      <section className="noteContainer">
         <div className="noteHdr">
             <h2>NOTES</h2>
             <button className="addNoteBtn" onClick={() => navigate("/notes/create")}>
                 +
             </button>
         </div>
-        <div className="noteList">
-              {/* returns the note Complete Card after filters/sorts by date */}
-                {/* {notes.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(note => 
-                  <NoteCard key={note.id} note={note} />
-                )} */}
-                {notes.map(note => 
-                  <NoteCard key={note.id} note={note} />
-                )}
+        <div>
+            {notes.filter(note => note.budgetId === selectedBudget).map(note => 
+                <NoteCard key={note.id} note={note} />
+            )}
         </div>
-      </div>
+      </section>
     </>
   )
 }

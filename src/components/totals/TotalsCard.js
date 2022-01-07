@@ -1,18 +1,15 @@
-import React, { useContext, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import React, { useContext } from "react"
 import { BillsContext } from "../bills/BillsDataProvider"
 import { BudgetContext } from "../budgets/BudgetDataProvider"
 import "./Totals.css"
 
-export const TotalsCard = ({ budget }) => {
-    const { bills, getBills } = useContext(BillsContext)
-    const { budgets, getBudgets, getBudgetById } = useContext(BudgetContext)
-
-	const navigate = useNavigate();
+export const TotalsCard = ({ budget, selectedBudget }) => {
+    const { bills } = useContext(BillsContext)
+    const { budgets } = useContext(BudgetContext)
 
     const totalBudget = () => {
         // total amount is pulled from the budget table {budgets.amount}
-        let budgetAmount = budgets.filter(budgetId => budgetId.id).map(budget => budget.amount)
+        let budgetAmount = budgets.map(budget => budget.amount).find(budget => budget.id === selectedBudget.id)
             // console.log("budget amount:", budgetAmount)
             return budgetAmount
     };
@@ -83,9 +80,6 @@ export const TotalsCard = ({ budget }) => {
                     <p className="totalPaid">Paid:&nbsp; $<span className="paidAmount">{totalPaid()}</span></p>
                     <p className="totalRemaining">Remaining:&nbsp; $<span className="remainingAmount">{totalRemaining()}</span></p>
                 </div>
-                {/* <div className="totalsEdit">
-                <button className="totalsEditBtn" onClick={() => { navigate(`/totals/edit/${budget.id}`) }}>&#9998;</button>              
-                </div> */}
             </div> 
         </section>
     )

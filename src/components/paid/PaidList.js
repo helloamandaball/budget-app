@@ -4,7 +4,7 @@ import { BillsContext } from "../bills/BillsDataProvider"
 import { PaidCard } from "./PaidCard"
 import "./Paid.css"
 
-export const PaidList = () => {
+export const PaidList = ({selectedBudget}) => {
   const { bills, getBills } = useContext(BillsContext)
 
 //   const navigate = useNavigate()
@@ -28,7 +28,7 @@ export const PaidList = () => {
               </tr> */}
                 {
                   //returns the bill Complete Card after filters/sorts by date
-                  bills.filter(bill => bill.paid === true).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => 
+                  bills.filter(bill => bill.budgetId === selectedBudget).filter(bill => bill.paid === true).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => 
                   <PaidCard key={bill.id} bill={bill} />)
                 }
             </tbody>

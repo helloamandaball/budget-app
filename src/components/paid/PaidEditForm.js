@@ -35,6 +35,7 @@ export const PaidEditForm = () => {
                     memo: bill.memo,
                     paid: true,
                     typeId: parseInt(bill.typeId),
+                    budgetId: parseInt(bill.budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate(`/`))

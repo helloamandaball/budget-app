@@ -7,7 +7,7 @@ import { BillForm } from "./BillForm"
 import "./Bills.css"
 // import { type } from "@testing-library/user-event/dist/type"
 
-export const BillsList = () => {
+export const BillsList = ({selectedBudget}) => {
     const { bills, getBills } = useContext(BillsContext)
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
 
@@ -36,7 +36,7 @@ export const BillsList = () => {
                         {/* {console.log("BillList: Render", bills)} */}
                     {
                     //filter bills for those not yet complete, then sort through those and put them in date order, then map to return BillCard
-                    bills.filter(bill => bill.paid === false).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => {
+                    bills.filter(bill => bill.budgetId === selectedBudget).filter(bill => bill.paid === false).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => {
                         const typeOfBill = billTypes.find(type => type.id === bill.typeId)
 
                        return <BillCard key={bill.id} bill={bill} typeOfBill={typeOfBill} />
