@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import { NotesContext } from "../notes/NoteDataProvider"
+import { NotesContext } from "./NoteDataProvider"
 import "./Note.css"
 
 export const NoteCard = ({ note }) => {
@@ -20,14 +20,16 @@ export const NoteCard = ({ note }) => {
         // const noteDueDate = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' }).format(formattedDate)
 
     return ( 
-        <section key = {note.id}> 
-            <div className = "noteTitle">{note.title}</div>  
-            {/* <div className = "noteDate">{noteDate}</div>  */}
-            <div className = "noteMemo">${note.memo}</div>
+        <div className="noteSection" key={note.id}>
+            <div className="note">
+                <div className="noteTitle">{note.title}</div>  
+                {/* <div className = "noteDate">{noteDate}</div>  */}
+                <div className="noteMemo">{note.memo}</div>
+            </div>
             <div className="noteEditDel">
-                <button className="noteEdit" onClick={() => { navigate(`/paid/edit/${note.id}`) }}>&#9998;</button>
+                <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${note.id}`) }}>&#9998;</button>
                 <button className="noteDel" onClick={handleDelete}>&#128465;</button>
             </div>
-        </section>
+        </div>
     )
 }

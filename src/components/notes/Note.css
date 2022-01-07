@@ -3,26 +3,21 @@
 /* Note List */
 .noteContainer {
     width: 100%;
+    margin-right: 10px;
 }
 
 .noteList {
-display: flex;
+    /* display: flex;
     justify-content: flex-start;
     align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px 10px;
-    width: 100%;
-}
-
-.note {
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px 10px;
-    width: 100%;
+    gap: 10px 10px; */
+    border: 1px solid #c9d3dd;
+    background-color: #FFF;
+    border-radius: 10px 0px 10px 10px;
+    width: 98%;
+    padding: 5px 5px 10px 10px;
 }
 
 .noteHdr {
@@ -62,6 +57,21 @@ display: flex;
 
 
 /* Note Card */
+.noteSection {
+    display: flex;
+    justify-content: flex-end;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    width: 100%;
+}
+
+.note {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
 .noteTitle {
     font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
     font-size: 24px;
@@ -70,8 +80,7 @@ display: flex;
     font-kerning: normal;
     letter-spacing: normal;
     color: #798da3;
-    margin-top: 0;
-    margin-bottom: 1px;
+    margin: 8px 0 0;
 }
 
 .noteDate {
@@ -93,8 +102,8 @@ display: flex;
     color: #798da3;
     /* border-top: 1px dotted #c9d3dd;
     border-radius: 3px;  */
-    padding: 5px 10px 5px 5px;
-    margin: 0 0 3px 0;
+    padding: 0px;
+    margin: 0 0 3px 3px;
 }
 
 .noteEdit, .noteDel {
@@ -103,7 +112,7 @@ display: flex;
     font-size: 19px;
     color: #c9d3dd;
     width: 24px;
-    height: 30px;
+    height: 24px;
     padding: 0;
     margin: 0;
 }
@@ -114,7 +123,15 @@ display: flex;
 } 
 
 .noteEditDel {
+    width: 50px;
     text-align: right;
-    margin-top: auto;
-    margin-bottom:10px;
+    margin-top: 4px;
+    margin-bottom: auto;
+}
+
+/* Note Form */
+.memoField {
+    width: 85%;
+    height: 100px;
+    overflow:  hidden;
 }

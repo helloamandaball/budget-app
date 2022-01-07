@@ -26,9 +26,6 @@ const {budgets} = useContext(BudgetContext)
                     {/* <PaidList /> */}
                 </div>
             </div>
-            <div className="">
-                <NoteList />
-            </div>
         </>
     )
 }

@@ -15,6 +15,7 @@ import { PaidList } from "./paid/PaidList"
 import { PaidEditForm } from "./paid/PaidEditForm";
 import { NoteList } from "./notes/NoteList";
 import { NoteForm } from "./notes/NoteForm"
+import { NotesProvider } from "./notes/NoteDataProvider"
 
 //ApplicationViews renders the function based on the web address
 export const ApplicationViews = () => {
@@ -23,6 +24,7 @@ export const ApplicationViews = () => {
         <BudgetsProvider>
         <BillsProvider>
         <BillTypesProvider>
+        <NotesProvider>
             <Routes>
                     
                 <Route path="/" element={<Dashboard />} />
@@ -44,9 +46,11 @@ export const ApplicationViews = () => {
                 <Route path="paid/edit/:billId/*" element={<PaidEditForm />} />
 
                 <Route path="notes/*" element={<NoteList />} />
+                <Route path="notes/create/*" element={<NoteForm />} />
                 <Route path="notes/edit/:noteId/*" element={<NoteForm />} />
 
             </Routes>
+        </NotesProvider>
         </BillTypesProvider>
         </BillsProvider>
         </BudgetsProvider>
