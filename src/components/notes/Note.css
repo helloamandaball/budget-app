@@ -2,16 +2,63 @@
 
 /* Note List */
 .noteContainer {
-
+    width: 100%;
 }
 
 .noteList {
-
+display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    width: 100%;
 }
 
 .note {
-
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    width: 100%;
 }
+
+.noteHdr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40px;
+}
+
+.h2, h2 {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding:0;
+    margin:0;
+}
+
+.addNoteBtn {
+    background-color: #61e5b4;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height:28px;
+    width: 28px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #cfcfcf;
+    padding: 0;
+    margin-left: 20px;
+}
+    .addNoteBtn:hover {
+        background-color: #5cbfed;
+    }
 
 
 /* Note Card */
