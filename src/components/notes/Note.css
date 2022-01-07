@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
+
+/* Note List */
+.noteContainer {
+    width: 99%;
+    margin-right: 0px;
+}
+
+.noteList {
+    /* display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px; */
+    border: 1px solid #c9d3dd;
+    background-color: #FFF;
+    border-radius: 10px 0px 10px 10px;
+    width: 98%;
+    padding: 5px 5px 10px 10px;
+    margin: 0 0 10px 0;
+}
+
+.noteHdr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40px;
+}
+
+.h2, h2 {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding:0;
+    margin:0;
+}
+
+.addNoteBtn {
+    background-color: #61e5b4;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height:28px;
+    width: 28px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #cfcfcf;
+    padding: 0;
+    margin-left: 20px;
+}
+    .addNoteBtn:hover {
+        background-color: #5cbfed;
+    }
+
+
+/* Note Card */
+.noteSection {
+    display: flex;
+    justify-content: flex-end;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    width: 100%;
+}
+
+.note {
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.noteTitle {
+    font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    line-height: normal;
+    font-weight: normal;
+    font-kerning: normal;
+    letter-spacing: normal;
+    color: #798da3;
+    margin: 8px 0 0;
+}
+
+.noteDate {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #798da3;
+    margin-top: 0;
+}
+
+.noteMemo {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: normal;
+    font-weight: 500;
+    color: #798da3;
+    /* border-top: 1px dotted #c9d3dd;
+    border-radius: 3px;  */
+    padding: 0px;
+    margin: 0 0 0 3px;
+}
+
+.noteEdit, .noteDel {
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    color: #c9d3dd;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.noteEdit:hover, .noteDel:hover {
+    background-color: transparent;
+    color: #798da3;
+} 
+
+.noteEditDel {
+    width: 50px;
+    text-align: right;
+    margin-top: 4px;
+    margin-bottom: auto;
+}
+
+/* Note Form */
+.memoField {
+    width: 85%;
+    height: 100px;
+    overflow:  hidden;
+}

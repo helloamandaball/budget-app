@@ -1,28 +1,30 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import "bootstrap/dist/css/bootstrap.min.css"
+// import "bootstrap/dist/css/bootstrap.min.css"
+// import { Nav } from "react-bootstrap"
 // import Button from 'react-bootstrap/Button';
+// import menuIcon from ".././images/menuIcon.png"
+// import searchIcon from ".././images/searchIcon.png"
 import "./NavBar.css"
-import menuIcon from ".././images/menuIcon.png"
-import searchIcon from ".././images/searchIcon.png"
-import { Nav } from "react-bootstrap"
 
 //
 export const NavBar = (props) => {
-    const [navBarMenu, setNavBarMenu] = useState(false);
-    const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
-
+    // const [navBarMenu, setNavBarMenu] = useState(false);
+    // const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
 
     return (
         <>
             <div className="hdrNavBar">
                 <div className="menuIconDiv">
-                    <Link to='#' className="">
+                    {/* <Link to='#' className="hamburgerMenuIcon">
                         <img src={menuIcon} alt="menu icon" className="menuIcon" />
-                    </Link>
+                        &#x2630;
+                    </Link> */}
                 </div>
-                <div className="hdrTitle">
-                    Budget Tracker
+                <div className="hdrTitleDiv">
+                    <Link to="/" className="hdrTitle">
+                        <h2 className="hdrTitle">Budget Tracker</h2>
+                    </Link>
                 </div>
                 <div className="logoutBtnDiv">
                     <Link className="logout" to="/budgets/create/">
@@ -30,13 +32,12 @@ export const NavBar = (props) => {
                     </Link>
                 </div>
             </div>
-            <nav className={navBarMenu ? 'navBar active' : 'navBar'}>
+            {/* <nav className={navBarMenu ? 'navBar active' : 'navBar'}>
                 <ul className="navList">
                     <li className="navBtn">
-                        <Link className="addMonth" to="/budgets/create/">
-                            <button className="addMonthBtn">ADD MONTH+</button>
+                        <Link className="addBudget" to="/budgets/create/">
+                            <button className="addBudgetBtn">NEW BUDGET+</button>
                         </Link>
-
                     </li>
                     <li className="navItem">
                         <Link className="navLink" to="/months">CURRENT MONTH</Link>
@@ -65,7 +66,7 @@ export const NavBar = (props) => {
                         </form>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
         </>
     )
 }

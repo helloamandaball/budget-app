@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
 
+/* Bill List */
+.billsContainer {
+    width: 100%;
+}
 
 .billHdr {
     display: flex;
@@ -21,15 +25,15 @@
     background-color: #61e5b4;
     border: 1px solid #cdf5de;
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height:28px;
+    width: 28px;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 22px;
     line-height: normal;
     color: #FFF;
     /* color: #3863a0; */
-    box-shadow: 1px 2px 8px #bebebe;
+    box-shadow: 1px 2px 8px #cfcfcf;
     padding: 0;
     margin-left: 20px;
 }
@@ -41,20 +45,25 @@
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px 10px;
+    width: 100%;
 }
+
+/* Bill Card */
 
 .billCard {
     border: 1px solid #c9d3dd;
     background-color: #FFF;
-    border-radius: 8px 0px 8px 8px;
-    width: 30%;
+    border-radius: 10px 0px 10px 10px;
+    width: 48%;
 }
 
 .billsListContainer {
     display: flex;
     justify-content: flex-start;
-    align-content: flex-start;
+    /* align-content: flex-start; */
 }
 
     .billList-leftColumn {
@@ -65,40 +74,147 @@
 
     .billList-rightColumn {
         align-self: flex-start;
+        min-width: 50px;
         text-align: right;
-        margin: 10px 5px auto auto;
+        margin: 5px 5px 10px auto;
+    }
+    .billList-bottomHalf {
+        margin: 5px 10px 10px 8px;
     }
 
     .billName {
+        font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+        font-size: 24px;
+        line-height: normal;
+        font-weight: normal;
+        font-kerning: normal;
+        letter-spacing: normal;
+        color: #798da3;
         margin-top: 0;
+        margin-bottom: 1px;
     }
 
     .billAmount {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: normal;
+        font-weight: 600;
+        color: #798da3;
         margin-top: 0;
+        margin-bottom: 3px;
     }
 
     .billDateText {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: normal;
+        font-weight: 500;
+        color: #798da3;
         margin-top: 0;
+        margin-bottom: 5px;
     }
 
     .billDate {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #798da3;
         margin-top: 0;
     }
 
     .billDetails {
-        margin-bottom: 0;
-    }
-
-    .detailsText {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        color: #798da3;
         margin-top: 0;
     }
 
+    .detailsText {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: normal;
+        font-weight: 400;
+        text-align: left;
+        color: #798da3;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        height: 15px;
+        width: 100px;
+        padding: 0;
+        margin: 0 0 5px;
+    }
+
+    .detailsText:hover {
+        color: #798da3;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    .detailsArrow {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: normal;
+        font-weight: normal;
+        text-align: left;
+        color: #798da3;
+    }
+
     .billType {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: normal;
+        font-weight: 500;
+        color: #798da3;
+        margin-top: 0;
+    }
+
+    .billTypeName {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #798da3;
         margin-top: 0;
     }
 
     .billMemo {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: normal;
+        font-weight: 500;
+        color: #798da3;
+        /* border-top: 1px dotted #c9d3dd;border-left: 1px dotted #c9d3dd;border-right: 1px dotted #c9d3dd;
+        border-radius: 3px; */
+        /* padding: 5px 10px 5px 5px; */
+        margin: 0 0 3px 0;
+    }
+
+    .billMemoText {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: normal;
+        font-weight: 400;
+        color: #798da3;
         margin-top: 0;
+        margin-right: 5px;
+    }
+
+    .billMemoBorder {
+        border: 1px dotted #c9d3dd;
+        border-radius: 3px;
+        height: 50px;
+        overflow: hidden;
+        padding: 5px 5px 5px 5px;
+        margin-top:0;
+        margin-bottom: 15px;
+    }
+
+    .billMemoBorder:hover {
+        overflow-y: scroll;
     }
 
     .billEdit, .billDel {
@@ -117,6 +233,27 @@
         color: #798da3;
     } 
 
+    .billEditDel {
+        text-align: right;
+        margin-top: auto;
+        margin-bottom:10px;
+    }
+
+    .checkedBillBox {
+        align-self: flex-start;
+    }
+
+    .checkedBillLabel {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: normal;
+        font-weight: 400;
+        text-align: center;
+        color: #798da3;
+        margin-top: 0;
+        padding-right: 7px;
+    }
+
     input[type=checkbox] {
         /* Double-sized Checkboxes */
         -ms-transform: scale(1.692); /* IE */
@@ -130,6 +267,11 @@
         margin:0 10px 0 0;
     }
 
+    input[type=checkbox]:hover {
+        color: blue;
+        background-color: blue;
+    }
+
   .checkedBillBox-completed input[type=checkbox]  {
     /* Double-sized Checkboxes */
     -ms-transform: scale(1.2); /* IE */
@@ -140,3 +282,25 @@
     padding: 20px;
     margin:0;
   }
+
+/* Form Styling */
+.cancelBtn{
+    background-color: #5cbfed;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height:28px;
+    width: 28px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #cfcfcf;
+    padding: 0 1px 0 0;
+    margin: 5px 24px 5px auto;
+}
+    .cancelBtn:hover {
+        background-color: #61e5b4;
+    }

@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from 'react-router-dom';
-import { BillsContext } from "./BillsDataProvider"
-import { BillTypesContext } from "./BillTypesDataProvider";
-import "./Bills.css"
+import { BillsContext } from "../bills/BillsDataProvider"
+import { BillTypesContext } from "../bills/BillTypesDataProvider";
+import "../bills/Bills.css"
 
-export const BillForm = () => {
-    const { addBill, getBillById, updateBill } = useContext(BillsContext)
+export const PaidEditForm = () => {
+    const { getBillById, updateBill } = useContext(BillsContext)
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
 
     const [bill, setBill] = useState({})
@@ -34,33 +34,20 @@ export const BillForm = () => {
                     date: bill.date,
                     amount: parseInt(bill.amount),
                     memo: bill.memo,
-                    paid: false,
+                    paid: true,
                     typeId: parseInt(bill.typeId),
                     budgetId: parseInt(budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate(`/`))
-            } else {
-                //POST - add new bill
-                addBill({
-                    name: bill.name,
-                    date: bill.date,
-                    amount: parseInt(bill.amount),
-                    memo: bill.memo,
-                    paid: false,
-                    typeId: parseInt(bill.typeId),
-                    budgetId: parseInt(budgetId),
-                    userId: +localStorage.activeUser
-                })
-                    .then(() => navigate("/"))
-            }
+            } 
         }
     }
 
     useEffect(() => {
         getBillTypes().then(() => {
             if (billId) {
-                //   console.log("bill ID:", billId)
+                  console.log("bill ID:", billId)
                 getBillById(billId)
                     .then(bill => {
                         setBill(bill)
@@ -75,9 +62,7 @@ export const BillForm = () => {
 
     return (
         <form className="billForm">
-            <h2 className="billForm__title">
-                {billId ? <>EDIT BILL</> : <>NEW BILL</>}
-            </h2>
+            <h2 className="billForm__title">EDIT PAID BILL</h2>
             <button className="cancelBtn" onClick={() => navigate("/")}>
                 X
             </button>
@@ -137,7 +122,7 @@ export const BillForm = () => {
                     event.preventDefault() // Prevent browser from submitting the form and refreshing the page
                     handleSaveBill()
                 }}>
-                {billId ? <>Save Bill</> : <>Add Bill</>}
+                SAVE
             </button>
         </form>
     )

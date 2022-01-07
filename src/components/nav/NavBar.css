@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
-
 /* Top Nav Bar */
 .hdrNavBar {
     display: flex;
@@ -11,26 +10,49 @@
     vertical-align: middle;
     background-color: #3863a0;
     height: 60px;
-    width: 100%;
+    width: 94%;
     margin: auto;
     padding: 0 24px;
 }
 
-.hdrTitle {
-    flex-basis: 40%;
-    flex-grow: 2;
-    flex-shrink: 1;
-    width: 30%;
+.hdrTitleDiv {
+    /* flex-basis: 30%; */
+    /* flex-grow: 2;
+    flex-shrink: 1; */
+    width: 25%;
     align-self: center;
+    padding: 2px 0px 0px 10px;
+    margin: auto;
+}
+
+.hdrTitle {
     font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
     color: #FFF;
     font-size: 28px;
     text-align: center;
-    padding: 2px 0px 0px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.hdrTitle:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburgerMenuIcon {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.hamburgerMenuIcon:hover {
+    color: #FFF;
 }
 
 .menuIconDiv{
-    flex-basis: 10%;
+    width: 22px;
+    /* flex-basis: 10%; */
 }
 
 .menuIcon {
@@ -40,9 +62,8 @@
 }
 
 .logoutBtnDiv {
-    flex-basis: 8%;
-    margin-left: auto;
-    margin-right: 2px;
+    width: 76px;
+    margin: auto 0px auto 0px;
 }
 
 .logoutBtn {
@@ -54,7 +75,7 @@
     background-color: transparent;
     border: 1px solid #fff;
     border-radius: 2px;
-    padding: 2px 5px 0px;
+    padding: 2px 5px;
     margin: 0;
 }
 
@@ -66,16 +87,21 @@
 
 /* Main Nav */
 
+nav {
+    background-color: #edf0f4;
+}
+
 .navBar {
     background-color: #edf0f4;
     border-top: 1px solid #fff;
-    height: 60px;
+    height: 53px;
     width: 100%;
-    padding: 0px 24px 0px 26px;
-    margin: 0;
+    margin: 0px 0px 20px;
 }
 
 .navList {
+    background-color: #edf0f4;
+    width: 95%;
     text-decoration: none;
     list-style: none;
     padding: 0;
@@ -86,23 +112,25 @@
     justify-content: flex-start;
     align-items: center;
     vertical-align: middle;
+    padding: 4px 24px 4px 26px;
 }
 
 .navItem {
     flex-basis: auto;
-    margin: 8px auto 0px;
+    margin: 2px auto 0px;
     padding: 0;
 }
 
 .navBtn {
-    flex-basis: auto;
-    margin: 15px 0 0px;
+    flex-basis: 120px;
+    margin: 8px 0 0px;
     padding: 0;
 }
 
 .navItem-search{
-    flex-basis: auto;
-    margin: 5px 0 0;
+    /* flex-basis: 50%; */
+    min-width: 204px;
+    margin: 3px 0 0;
     padding: 0;
 }
 
@@ -121,30 +149,33 @@
     border-radius: 2px;
 }
 
-.addMonthBtn {
+/* .addBudgetBtn {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: bold;
     height: 28px;
     width: 120px;
     color: #3863a0;
-    background-color: #8fec9b;
-    border: 1px solid #61e5b4;
+    background-color: #61e5b4;
+    border: 1px solid #8fec9b;
     border-radius: 2px;
-    padding: 2px 5px 0px;
+    box-shadow: 1px 2px 8px #d4d4d4;
+    padding: 1px 5px 2px;
     margin: 0 0 4px;
 }
 
-.addMonthBtn:hover{
+.addBudgetBtn:hover{
     color: #fff;
     border-color: #5cbfed;
     background-color: #5cbfed;
-}
+    padding-bottom: 0px;
+} */
 
 .searchIcon {
     width: 24px;
     height: 24px;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
+    vertical-align: middle;
 }
 
 .searchBox {
@@ -154,12 +185,12 @@
     background-color: #fff;
     border: 2px solid #c9d3dd; 
     border-radius: 20px;
-    padding: 0px 3px;
+    padding: 0px 0px;
     margin-top: 4px;
 }
 
 .searchInput {
-    height: 30px;
+    height: 32px;
     width: 166px;
     border: none;
     border-radius: 16px;

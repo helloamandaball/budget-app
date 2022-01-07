@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router";
-// import { NavBar } from "./nav/NavBar";
+import { NavBar } from "./nav/NavBar";
 import { ApplicationViews } from "./ApplicationViews";
+import { Footer } from "./footer/Footer";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register"
 import "./BudgetApp.css";
@@ -15,10 +16,9 @@ export const BudgetApp = () => {
   if (localStorage.getItem("activeUser")) {
     return (
       <>
-        {/* <NavBar /> */}
-        <section className="main">
-          <ApplicationViews />
-        </section>
+        <NavBar />
+        <ApplicationViews />
+        <Footer />
       </>
     );
   } else {

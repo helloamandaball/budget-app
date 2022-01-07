@@ -1,0 +1,76 @@
+            // Dropdown menu for budget select that can go in BudgetList.js, if needed.
+
+                const handleControlledInputChange = (event) => {
+                    //code to handle dropdown from below goes here.
+                }
+
+                <fieldset>
+                    <div className="selectBudget">
+                        <select defaultValue={1} name="selectBudget" id="selectBudget" className="selectBudgetDropdown"
+                        onChange={handleControlledInputChange} >
+                            <option value="0" className="">View An Existing Budget</option>
+                            {/* Sort months alphabetically by name (moA, moB), then sort by year (yr1, yr2) */}
+                            {budgets.sort((monthA,monthB) => {return monthA.month.localeCompare(monthB.month)}).sort((yr1,yr2) => {return new Date(yr1.year) - new Date (yr2.year)}).map(budgetSelection => (
+                                <option key={budgetSelection.id} value={budgetSelection.id}>
+                                    {budgetSelection.month}&nbsp;{budgetSelection.year}
+                                </option>
+                            ))}
+                            {/* {budgets.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(budget => (
+                                <option key={budget.id} value={budget.id}>
+                                    {budgetDate}
+                                </option>
+                            ))} */}
+                        </select>
+                    </div>
+                </fieldset>
+
+
+
+            //Dropdown for form edit, if input="month" was being used:
+            
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="date">Month &amp; Year: </label>
+                        <input type="month" id="date" name="date" required autoFocus className="form-control"
+                            onChange={handleControlledInputChange}
+                            defaultValue={budget.date} />
+                    </div>
+                </fieldset>
+
+
+
+            //Sort/Display of Budget's date (month/year only) if above input="month" was used in the form, but this would go into the List file:
+
+                <h4>{budgets.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(budget => budget.date)}</h4>
+
+
+
+            //Date format of the input="month" data from the api:
+
+                //Use to format date into MM/DD/YYYY
+                    const formattedDate = new Date(budget.date));
+                    const budgetDate = new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', year: 'numeric', month: 'short'}).format(formattedDate)
+                                        
+                            <h4>{budgetDate}</h4>
+
+
+
+            //In NoteCard, if I wanted to add a date and sort by it:
+                {/* returns the note Complete Card after filters/sorts by date */}
+
+                    {notes.sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(note => 
+                    <NoteCard key={note.id} note={note} />
+                    )}
+
+
+
+            //In TotalsCard, if I wanted an edit button next to total amount:
+            <div className="totalsEdit">
+                <button className="totalsEditBtn" onClick={() => { navigate(`/totals/edit/${budget.id}`) }}>&#9998;</button>              
+                </div>
+
+
+        // attempt at subtraction using the .reduce
+
+            .reduce((total) => total + bill.amount, 0)
+            .reduce((previousValue, currentValue) => previousValue + currentValue.amount)
