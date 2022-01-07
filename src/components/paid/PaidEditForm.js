@@ -5,12 +5,13 @@ import { BillTypesContext } from "../bills/BillTypesDataProvider";
 import "../bills/Bills.css"
 
 export const PaidEditForm = () => {
-    const { addBill, getBillById, updateBill } = useContext(BillsContext)
+    const { getBillById, updateBill } = useContext(BillsContext)
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
 
     const [bill, setBill] = useState({})
     const [isLoading, setIsLoading] = useState(true);
 
+    const { budgetId } = useParams();
     const { billId } = useParams();
     const navigate = useNavigate();
 
@@ -35,7 +36,7 @@ export const PaidEditForm = () => {
                     memo: bill.memo,
                     paid: true,
                     typeId: parseInt(bill.typeId),
-                    budgetId: parseInt(bill.budgetId),
+                    budgetId: parseInt(budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate(`/`))

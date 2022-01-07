@@ -19,13 +19,13 @@ export const NoteList = ({selectedBudget}) => {
       <section className="noteContainer">
         <div className="noteHdr">
             <h2>NOTES</h2>
-            <button className="addNoteBtn" onClick={() => navigate("/notes/create")}>
+            <button className="addNoteBtn" onClick={() => navigate(`/notes/create/${selectedBudget}`)}>
                 +
             </button>
         </div>
         <div>
             {notes.filter(note => note.budgetId === selectedBudget).map(note => 
-                <NoteCard key={note.id} note={note} />
+                <NoteCard key={note.id} note={note} selectedBudget={selectedBudget} />
             )}
         </div>
       </section>

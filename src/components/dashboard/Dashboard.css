@@ -4,7 +4,7 @@
     margin: 30px;
 }
 
-.flex-row-reverse {
+/* .flex-row-reverse {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -19,8 +19,8 @@
 }
 
 .fullWidth {
-    width: 100%;
-}
+    width: 98%;
+} */
 
 .footerSpacing {
     width: 100%;

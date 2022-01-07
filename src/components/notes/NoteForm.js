@@ -9,6 +9,7 @@ export const NoteForm = () => {
     const [note, setNote] = useState({})
     const [isLoading, setIsLoading] = useState(true);
 
+    const { budgetId } = useParams();
     const { noteId } = useParams();
     const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ export const NoteForm = () => {
                 title: note.title,
                 // date: note.date,
                 memo: note.memo,
-                // budgetId: parseInt(bill.budgetId),
+                budgetId: parseInt(budgetId),
                 userId: +localStorage.activeUser
             })
                 .then(() => navigate(`/`))
@@ -37,7 +38,7 @@ export const NoteForm = () => {
                 title: note.title,
                 // date: note.date,
                 memo: note.memo,
-                budgetId: parseInt(note.budgetId),
+                budgetId: parseInt(budgetId),
                 userId: +localStorage.activeUser
             })
                 .then(() => navigate("/"))
@@ -51,7 +52,7 @@ export const NoteForm = () => {
             getNoteById(noteId)
                 .then(note => {
                     setNote(note)
-                        console.log("note ID:", noteId)
+                        // console.log("note ID:", noteId)
                     setIsLoading(false)
                 })
         } else {

@@ -68,3 +68,9 @@
             <div className="totalsEdit">
                 <button className="totalsEditBtn" onClick={() => { navigate(`/totals/edit/${budget.id}`) }}>&#9998;</button>              
                 </div>
+
+
+        // attempt at subtraction using the .reduce
+
+            .reduce((total) => total + bill.amount, 0)
+            .reduce((previousValue, currentValue) => previousValue + currentValue.amount)

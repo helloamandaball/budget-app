@@ -29,7 +29,7 @@ export const PaidList = ({selectedBudget}) => {
                 {
                   //returns the bill Complete Card after filters/sorts by date
                   bills.filter(bill => bill.budgetId === selectedBudget).filter(bill => bill.paid === true).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => 
-                  <PaidCard key={bill.id} bill={bill} />)
+                  <PaidCard key={bill.id} bill={bill} selectedBudget={selectedBudget} />)
                 }
             </tbody>
           </table>

@@ -11,6 +11,7 @@ export const BillForm = () => {
     const [bill, setBill] = useState({})
     const [isLoading, setIsLoading] = useState(true);
 
+    const { budgetId } = useParams();
     const { billId } = useParams();
     const navigate = useNavigate();
 
@@ -35,7 +36,7 @@ export const BillForm = () => {
                     memo: bill.memo,
                     paid: false,
                     typeId: parseInt(bill.typeId),
-                    budgetId: parseInt(bill.budgetId),
+                    budgetId: parseInt(budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate(`/`))
@@ -48,7 +49,7 @@ export const BillForm = () => {
                     memo: bill.memo,
                     paid: false,
                     typeId: parseInt(bill.typeId),
-                    budgetId: parseInt(bill.budgetId),
+                    budgetId: parseInt(budgetId),
                     userId: +localStorage.activeUser
                 })
                     .then(() => navigate("/"))
@@ -59,7 +60,7 @@ export const BillForm = () => {
     useEffect(() => {
         getBillTypes().then(() => {
             if (billId) {
-                  console.log("bill ID:", billId)
+                //   console.log("bill ID:", billId)
                 getBillById(billId)
                     .then(bill => {
                         setBill(bill)

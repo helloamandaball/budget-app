@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { BillsContext } from "../bills/BillsDataProvider"
 import "./Paid.css"
 
-export const PaidCard = ({ bill }) => {
+export const PaidCard = ({ bill, selectedBudget }) => {
     const { paidBill, getBills, deleteBill } = useContext(BillsContext)
 
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ export const PaidCard = ({ bill }) => {
             <td className="paidBillDateColumn">{billDueDate}</td> 
             <td className="paidBillAmountColumn">${bill.amount.toFixed(2)}</td>
             <td className="paidBillEditDel">
-                <button className="paidBillEdit" onClick={() => { navigate(`/paid/edit/${bill.id}`) }}>&#9998;</button>
+                <button className="paidBillEdit" onClick={() => { navigate(`/paid/edit/${selectedBudget}/${bill.id}`) }}>&#9998;</button>
                 <button className="paidBillDel" onClick={handleDelete}>&#128465;</button>
             </td>
         </tr>

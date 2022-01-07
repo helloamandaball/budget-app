@@ -34,17 +34,17 @@ export const ApplicationViews = () => {
                 <Route path="budgets/detail/:budgetId/*" element={<BudgetDetails />} />
                                 
                 <Route path="bills/*" element={<BillsList />} />
-                <Route path="bills/create/*" element={<BillForm />} />
-                <Route path="bills/edit/:billId/*" element={<BillForm />} />
+                <Route path="bills/create/:budgetId/*" element={<BillForm />} />
+                <Route path="bills/edit/:budgetId/:billId/*" element={<BillForm />} />
 
                 <Route path="totals/*" element={<TotalsList />} />
 
                 <Route path="paid/*" element={<PaidList />} />
-                <Route path="paid/edit/:billId/*" element={<PaidEditForm />} />
+                <Route path="paid/edit/:budgetId/:billId/*" element={<PaidEditForm />} />
 
                 <Route path="notes/*" element={<NoteList />} />
-                <Route path="notes/create/*" element={<NoteForm />} />
-                <Route path="notes/edit/:noteId/*" element={<NoteForm />} />
+                <Route path="notes/create/:budgetId/*" element={<NoteForm />} />
+                <Route path="notes/edit/:budgetId/:noteId/*" element={<NoteForm />} />
 
             </Routes>
         </NotesProvider>

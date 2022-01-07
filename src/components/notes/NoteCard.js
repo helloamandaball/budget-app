@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { NotesContext } from "./NoteDataProvider"
 import "./Note.css"
 
-export const NoteCard = ({ note }) => {
+export const NoteCard = ({ note, selectedBudget }) => {
     const { getNotes, deleteNote } = useContext(NotesContext)
 
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ export const NoteCard = ({ note }) => {
                 <div className="noteMemo">{note.memo}</div>
             </div>
             <div className="noteEditDel">
-                <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${note.id}`) }}>&#9998;</button>
+                <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${selectedBudget}/${note.id}`) }}>&#9998;</button>
                 <button className="noteDel" onClick={handleDelete}>&#128465;</button>
             </div>
         </div>

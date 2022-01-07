@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { BillsContext } from "./BillsDataProvider"
 import "./Bills.css"
 
-export const BillCard = ({ bill, typeOfBill }) => {
+export const BillCard = ({ bill, typeOfBill, selectedBudget }) => {
     const { bills, getBills, paidBill, deleteBill } = useContext(BillsContext)
 
     useEffect(() => {
@@ -52,12 +52,12 @@ export const BillCard = ({ bill, typeOfBill }) => {
             <div className="billList-bottomHalf">
                 <p className="billDateText">DUE:&nbsp; <span className="billDate">{billDueDate}</span></p>
                 
-                <button className="detailsText">
+                {/* <button className="detailsText">
                     <u>SHOW DETAILS</u>&nbsp;<span className="detailsArrow">&#9654;</span>
                 </button>
                 <button className="detailsText">
                     <u>HIDE DETAILS</u>&nbsp;<span className="detailsArrow">&#9660;</span>
-                </button>
+                </button> */}
                     {/* Show-Hide details when button above is clicked */}
                     <div className="billDetails">
                         <p className="billType">BILL TYPE:&nbsp; <span className="billTypeName">{typeOfBill?.name}</span></p>
@@ -68,7 +68,7 @@ export const BillCard = ({ bill, typeOfBill }) => {
                     </div>
 
                 <div className="billEditDel">
-                    <button className="billEdit" onClick={() => { navigate(`/bills/edit/${bill.id}`) }}>&#9998;</button>
+                    <button className="billEdit" onClick={() => { navigate(`/bills/edit/${selectedBudget}/${bill.id}`) }}>&#9998;</button>
                     <button className="billDel" onClick={handleDelete}>&#128465;</button>
                 </div>
             </div>    

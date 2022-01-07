@@ -26,7 +26,7 @@ export const BillsList = ({selectedBudget}) => {
             <div className="billsContainer">
                 <div className="billHdr">
                     <h2>BILLS</h2>
-                    <button className="addBillBtn" onClick={() => navigate("/bills/create")}>
+                    <button className="addBillBtn" onClick={() => navigate(`/bills/create/${selectedBudget}`)}>
                     {/* <button className="addBillBtn" onClick={() => setButtonPopup(true)}> */}
                         +
                     </button>
@@ -39,7 +39,7 @@ export const BillsList = ({selectedBudget}) => {
                     bills.filter(bill => bill.budgetId === selectedBudget).filter(bill => bill.paid === false).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => {
                         const typeOfBill = billTypes.find(type => type.id === bill.typeId)
 
-                       return <BillCard key={bill.id} bill={bill} typeOfBill={typeOfBill} />
+                       return <BillCard key={bill.id} bill={bill} typeOfBill={typeOfBill} selectedBudget={selectedBudget} />
                     })
                     }
                 </div>
