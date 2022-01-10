@@ -32,10 +32,12 @@ export const ApplicationViews = () => {
                 <Route path="budgets/create/*" element={<BudgetForm />} />
                 <Route path="budgets/edit/:budgetId/*" element={<BudgetForm />} />
                 <Route path="budgets/detail/:budgetId/*" element={<BudgetDetails />} />
+                <Route path="budgets/:budgetId/*" element={<BudgetListTabs />} />
                                 
                 <Route path="bills/*" element={<BillsList />} />
                 <Route path="bills/create/:budgetId/*" element={<BillForm />} />
                 <Route path="bills/edit/:budgetId/:billId/*" element={<BillForm />} />
+                <Route path="bills/:budgetId/*" element={<BillsList />} />
 
                 <Route path="totals/*" element={<TotalsList />} />
 

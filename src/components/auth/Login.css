@@ -137,5 +137,26 @@
        margin: auto;
    }
    
+
+/* Logout Button */
+.logoutBtn {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 26px;
+    width: 74px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 2px 5px;
+    margin: 0;
+}
+
+.logoutBtn:hover {
+    color: #3863a0;
+    background-color: #fff;
+    font-weight: bold;
+}
+
    
    

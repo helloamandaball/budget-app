@@ -24,7 +24,7 @@ export const NoteList = ({selectedBudget}) => {
             </button>
         </div>
         <div>
-            {notes.filter(note => note.budgetId === selectedBudget).map(note => 
+            {notes.filter(note => note.userId === +localStorage.activeUser).filter(note => note.budgetId === selectedBudget).filter(note => note.budgetId === selectedBudget).map(note => 
                 <NoteCard key={note.id} note={note} selectedBudget={selectedBudget} />
             )}
         </div>

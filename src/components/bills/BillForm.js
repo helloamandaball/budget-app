@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from 'react-router-dom';
 import { BillsContext } from "./BillsDataProvider"
 import { BillTypesContext } from "./BillTypesDataProvider";
+import { BudgetContext } from "../budgets/BudgetDataProvider";
 import "./Bills.css"
 
 export const BillForm = () => {
     const { addBill, getBillById, updateBill } = useContext(BillsContext)
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
+    const { selectedBudget, setSelectedBudget } = useContext(BudgetContext)
 
     const [bill, setBill] = useState({})
     const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +29,7 @@ export const BillForm = () => {
         } else {
             setIsLoading(true);
             if (billId) {
+                setSelectedBudget(parseInt(budgetId))
                 //PUT - update bill
                 updateBill({
                     id: bill.id,
@@ -52,7 +55,7 @@ export const BillForm = () => {
                     budgetId: parseInt(budgetId),
                     userId: +localStorage.activeUser
                 })
-                    .then(() => navigate("/"))
+                    .then(() => navigate(`/`))
             }
         }
     }

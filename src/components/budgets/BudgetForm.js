@@ -4,7 +4,7 @@ import { BudgetContext } from "./BudgetDataProvider"
 import "./Budget.css"
 
 export const BudgetForm = () => {
-    const { addBudget, getBudgetById, updateBudget, getBudgets } = useContext(BudgetContext)
+    const { addBudget, getBudgetById, updateBudget, getBudgets, selectedBudget, setSelectedBudget } = useContext(BudgetContext)
 
     const [budget, setBudget] = useState({})
     const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +21,7 @@ export const BudgetForm = () => {
     const handleSaveBudget = () => {
         setIsLoading(true);
         if (budgetId) {
+            setSelectedBudget(parseInt(budgetId))
             //PUT - update budget
             updateBudget({
                 id: budget.id,

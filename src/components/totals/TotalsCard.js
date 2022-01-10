@@ -12,7 +12,6 @@ export const TotalsCard = ({ budget, selectedBudget }) => {
          let budgetAmount = budgets.find(budgetObj => budgetObj.id === selectedBudget)
             // console.log("budget amount:", budgetAmount)
             return budgetAmount
-        
     };
     
     const totalPending = () => {
@@ -55,9 +54,10 @@ export const TotalsCard = ({ budget, selectedBudget }) => {
         }
             // console.log("this is the sum amount:", sum)
 
-        let remTotal = sum -= totalBudget()?.amount * -1;
-            // * -1 multiplies by -1 in order to get it showing as a positive integer if it is in fact a positive number.
+        let sumTotal = sum -= totalBudget()?.amount;
 
+            // * -1 multiplies by -1 in order to get it showing as a positive integer if it is in fact a positive number.
+        let remTotal = sumTotal * -1;
             // console.log("remaining amount:", remTotal)
             return remTotal.toFixed(2)
     }
@@ -65,13 +65,37 @@ export const TotalsCard = ({ budget, selectedBudget }) => {
 
     return(
         <section className="totals">
+            {budgets.filter(budget => budget.id === selectedBudget).map(budget => {
+                return <h2 className="totalsHdr">{budget.month} <span className="totalHdrYr">{budget.year}</span> Totals</h2>
+            })}
             <div className="totalsListContainer">
-                <div className="totalsList">
+                {/* <div className="totalsList">
                     <p className="totalBudget">Total Budget:&nbsp; $<span className="totalAmount">{totalBudget()?.amount.toFixed(2)}</span></p>
                     <p className="totalPending">Bills Pending:&nbsp; $<span className="pendingAmount">{totalPending()}</span></p>
                     <p className="totalPaid">Bills Paid:&nbsp; $<span className="paidAmount">{totalPaid()}</span></p>
                     <p className="totalRemaining">Remaining Budget:&nbsp; $<span className="remainingAmount">{totalRemaining()}</span></p>
-                </div>
+                </div> */}
+                
+                <table className="totalsList">
+                    <tbody>
+                        <tr>
+                            <td className="totalBudget">Total Budget:&nbsp; $</td>
+                            <td className="totalAmount">{totalBudget()?.amount.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="totalPending">Bills Pending:&nbsp; $</td>
+                            <td className="pendingAmount">{totalPending()}</td>
+                        </tr>
+                        <tr>
+                            <td className="totalPaid">Bills Paid:&nbsp; $</td>
+                            <td className="paidAmount">{totalPaid()}</td>
+                        </tr>
+                        <tr>
+                            <td className="totalRemaining">Remaining Budget:&nbsp; $</td>
+                            <td className="remainingAmount">{totalRemaining()}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div> 
         </section>
     )

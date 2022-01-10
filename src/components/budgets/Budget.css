@@ -142,10 +142,10 @@ h4 {
     display: flex;
     height: 50px;
     width: 140px;
-    background-color: #cdf5de;
-    border-top: 1px solid #cdf5de;
-    border-right: 1px solid #cdf5de;
-    border-left: 1px solid #cdf5de;
+    background-color: #eef1f5;
+    border-top: 1px solid #eef1f5;
+    border-right: 1px solid #eef1f5;
+    border-left: 1px solid #eef1f5;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0;
@@ -154,8 +154,20 @@ h4 {
 /* .moYrTab:hover{
     background-color: #61e5b4;
 } */
+.moYrTab-clicked { 
+    display: flex;
+    height: 50px;
+    width: 140px;
+    background-color: #cdf5de;
+    border-top: 1px solid #cdf5de;
+    border-right: 1px solid #cdf5de;
+    border-left: 1px solid #cdf5de;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0;
+    margin:0 0 0 3px;}
 
-.moYrTab-Dimmed {
+/* .moYrTab-Dimmed {
     display: flex;
     height: 50px;
     width: 140px;
@@ -167,7 +179,7 @@ h4 {
     border-top-right-radius: 8px;
     padding: 0;
     margin:0 0 0 3px;
-}
+} */
 
     .moYrText {
         height: 40px;

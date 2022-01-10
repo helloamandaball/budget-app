@@ -6,6 +6,7 @@ export const BudgetContext = createContext()
 // This component establishes what data can be used.
 export const BudgetsProvider = (props) => {
     const [budgets, setBudgets] = useState([])
+    const [selectedBudget, setSelectedBudget] = useState({});
     const [searchTerms, setSearchTerms] = useState("")
 
     const getBudgets = () => {
@@ -51,7 +52,7 @@ export const BudgetsProvider = (props) => {
     return (
         <BudgetContext.Provider value={
             {
-                budgets, addBudget, getBudgets, getBudgetById, deleteBudget, updateBudget, searchTerms, setSearchTerms
+                budgets, addBudget, getBudgets, getBudgetById, deleteBudget, updateBudget, searchTerms, setSearchTerms, setSelectedBudget, selectedBudget
             }
         }>
             {props.children}

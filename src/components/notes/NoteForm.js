@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from 'react-router-dom';
 import { NotesContext } from "./NoteDataProvider"
+import { BudgetContext } from "../budgets/BudgetDataProvider";
 import "./Note.css"
 
 export const NoteForm = () => {
     const { addNote, getNoteById, updateNote } = useContext(NotesContext)
+    const { selectedBudget, setSelectedBudget } = useContext(BudgetContext)
 
     const [note, setNote] = useState({})
     const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +24,7 @@ export const NoteForm = () => {
     const handleSaveNote = () => {
         setIsLoading(true);
         if (noteId) {
+            setSelectedBudget(parseInt(budgetId))
             //PUT - update note
             updateNote({
                 id: note.id,

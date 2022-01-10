@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 // import Button from 'react-bootstrap/Button';
 // import menuIcon from ".././images/menuIcon.png"
 // import searchIcon from ".././images/searchIcon.png"
+import { Logout } from "../auth/Logout"
 import "./NavBar.css"
 
 //
@@ -26,10 +27,13 @@ export const NavBar = (props) => {
                         <h2 className="hdrTitle">Budget Tracker</h2>
                     </Link>
                 </div>
-                <div className="logoutBtnDiv">
+                {/* <div className="logoutBtnDiv">
                     <Link className="logout" to="/budgets/create/">
                         <button className="logoutBtn">LOG OUT</button>
                     </Link>
+                </div> */}
+                <div className="logoutBtnDiv">
+                    <Logout />
                 </div>
             </div>
             {/* <nav className={navBarMenu ? 'navBar active' : 'navBar'}>
