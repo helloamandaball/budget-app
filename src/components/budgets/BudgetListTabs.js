@@ -19,12 +19,12 @@ export const BudgetListTabs = ({setSelectedBudget}) => {
     //         .then(getBudgets)
     // }
 
-    const handleDelete = () => {
-        deleteBudget(budgets.id)
-        .then(() => {
-            navigate("/")
-          })
-    }
+    // const handleDelete = () => {
+    //     deleteBudget(budgets.id)
+    //     .then(() => {
+    //         navigate("/")
+    //       })
+    // }
 
     return (
         <>
@@ -52,7 +52,7 @@ export const BudgetListTabs = ({setSelectedBudget}) => {
                                 </div>
                                     <div className="budgetEditDel">
                                         <button className="budgetEdit" onClick={() => { navigate(`/budgets/edit/${budget.id}`) }}>&#9998;</button>
-                                        <button className="budgetDel" onClick={handleDelete}>&#128465;</button>
+                                        {/* <button className="budgetDel" onClick={handleDelete}>&#128465;</button> */}
                                     </div>
                             </div>
                         </>

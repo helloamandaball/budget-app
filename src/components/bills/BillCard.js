@@ -4,7 +4,7 @@ import { BillsContext } from "./BillsDataProvider"
 import "./Bills.css"
 
 export const BillCard = ({ bill, typeOfBill, selectedBudget }) => {
-    const { bills, getBills, paidBill, deleteBill } = useContext(BillsContext)
+    const { getBills, paidBill, deleteBill } = useContext(BillsContext)
 
     useEffect(() => {
         // console.log("Bills List: useEffect - getBills")
