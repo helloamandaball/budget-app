@@ -62,41 +62,56 @@ export const TotalsCard = ({ budget, selectedBudget }) => {
             return remTotal.toFixed(2)
     }
 
+    const totalPaidAndPending = () => {
+        // let budgetAmount = budgets.find(budgetObj => budgetObj.id === selectedBudget)
+        let unpaidAmounts = bills.filter(bill => bill.paid === false).filter(bill => bill.budgetId === selectedBudget).map(bill => bill.amount)
+        let paidAmounts = bills.filter(bill => bill.paid === true).filter(bill => bill.budgetId === selectedBudget).map(bill => bill.amount)
+
+        let sumPaidPending = unpaidAmounts.length += paidAmounts.length;
+        // let totalAccountedFor = budgetAmount -= sumPaidPending;
+        return sumPaidPending
+    }
+
 
     return(
-        <section className="totals">
-            {budgets.filter(budget => budget.id === selectedBudget).map(budget => {
-                return <h2 className="totalsHdr">{budget.month} <span className="totalHdrYr">{budget.year}</span> Totals</h2>
-            })}
-            <div className="totalsListContainer">
-                {/* <div className="totalsList">
-                    <p className="totalBudget">Total Budget:&nbsp; $<span className="totalAmount">{totalBudget()?.amount.toFixed(2)}</span></p>
-                    <p className="totalPending">Bills Pending:&nbsp; $<span className="pendingAmount">{totalPending()}</span></p>
-                    <p className="totalPaid">Bills Paid:&nbsp; $<span className="paidAmount">{totalPaid()}</span></p>
-                    <p className="totalRemaining">Remaining Budget:&nbsp; $<span className="remainingAmount">{totalRemaining()}</span></p>
-                </div> */}
-                
-                <table className="totalsList">
-                    <tbody>
-                        <tr>
-                            <td className="totalBudget">Total Budget:&nbsp; $</td>
-                            <td className="totalAmount">{totalBudget()?.amount.toFixed(2)}</td>
-                        </tr>
-                        <tr>
-                            <td className="totalPending">Bills Pending:&nbsp; $</td>
-                            <td className="pendingAmount">{totalPending()}</td>
-                        </tr>
-                        <tr>
-                            <td className="totalPaid">Bills Paid:&nbsp; $</td>
-                            <td className="paidAmount">{totalPaid()}</td>
-                        </tr>
-                        <tr>
-                            <td className="totalRemaining">Remaining Budget:&nbsp; $</td>
-                            <td className="remainingAmount">{totalRemaining()}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> 
-        </section>
+        <>
+            <section className="totals">
+                {budgets.filter(budget => budget.id === selectedBudget).map(budget => {
+                    return <h2 className="totalsHdr">{budget.month} <span className="totalHdrYr">{budget.year}</span> Totals</h2>
+                })}
+                <div className="totalsListContainer">
+                    {/* <div className="totalsList">
+                        <p className="totalBudget">Total Budget:&nbsp; $<span className="totalAmount">{totalBudget()?.amount.toFixed(2)}</span></p>
+                        <p className="totalPending">Bills Pending:&nbsp; $<span className="pendingAmount">{totalPending()}</span></p>
+                        <p className="totalPaid">Bills Paid:&nbsp; $<span className="paidAmount">{totalPaid()}</span></p>
+                        <p className="totalRemaining">Remaining Budget:&nbsp; $<span className="remainingAmount">{totalRemaining()}</span></p>
+                    </div> */}
+                    
+                    <table className="totalsList">
+                        <tbody>
+                            <tr>
+                                <td className="totalBudget">Total Budget:&nbsp; $</td>
+                                <td className="totalAmount">{totalBudget()?.amount.toFixed(2)}</td>
+                            </tr>
+                            <tr>
+                                <td className="totalPending">Bills Pending:&nbsp; $</td>
+                                <td className="pendingAmount">{totalPending()}</td>
+                            </tr>
+                            <tr>
+                                <td className="totalPaid">Bills Paid:&nbsp; $</td>
+                                <td className="paidAmount">{totalPaid()}</td>
+                            </tr>
+                            <tr>
+                                <td className="totalRemaining">Remaining Budget:&nbsp; $</td>
+                                <td className="remainingAmount">{totalRemaining()}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+            </section>
+            {/* <section>
+                <progress id="progressBar" className="progressBar" value={totalPaidAndPending()} max="100"></progress>
+            </section> */}
+        </>
     )
 }

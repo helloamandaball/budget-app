@@ -17,15 +17,16 @@ const {budgets} = useContext(BudgetContext)
             <div className="flex-row-reverse">
                 <div className="rightColumn">
                     <TotalsList selectedBudget={selectedBudget} />
+                    <NoteList selectedBudget={selectedBudget} />
                 </div>
                 <div className="leftColumn">
                     <BillsList selectedBudget={selectedBudget} />
                     <PaidList selectedBudget={selectedBudget} />
                 </div>
             </div>
-            <div className="">
+            {/* <div className="">
                 <NoteList selectedBudget={selectedBudget} />
-            </div>
+            </div> */}
         </>
     )
 }

@@ -8,7 +8,6 @@ import { Link } from "react-router-dom"
 import { Logout } from "../auth/Logout"
 import "./NavBar.css"
 
-//
 export const NavBar = (props) => {
     // const [navBarMenu, setNavBarMenu] = useState(false);
     // const showNavBarMenu = () => setNavBarMenu(!navBarMenu);
@@ -16,11 +15,20 @@ export const NavBar = (props) => {
     return (
         <>
             <div className="hdrNavBar">
-                <div className="menuIconDiv">
-                    {/* <Link to='#' className="hamburgerMenuIcon">
+                {/* <div className="menuIconDiv">
+                    <Link to='#' className="hamburgerMenuIcon">
                         <img src={menuIcon} alt="menu icon" className="menuIcon" />
                         &#x2630;
-                    </Link> */}
+                    </Link>
+                </div> */}
+                <div className="startBudget">
+                    <ul className="startBudgetList">
+                        <li className="newBudgetBtn">
+                            <Link className="addBudget" to="/budgets/create/">
+                                <button className="addBudgetBtn">NEW BUDGET+</button>
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
                 <div className="hdrTitleDiv">
                     <Link to="/" className="hdrTitle">

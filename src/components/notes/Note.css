@@ -21,12 +21,29 @@
     margin: 0 0 10px 0;
 }
 
+    .noteList2 {
+        border: 1px solid #c9d3dd;
+        background-color: #FFF;
+        border-radius: 10px 0px 10px 10px;
+        width: 96%;
+        padding: 5px 5px 10px 10px;
+        margin: 0 0 10px 0;
+    }
+
 .noteHdr {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     height: 40px;
 }
+
+    .noteHdr2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 40px;
+        margin-top: 30px;
+    }
 
 .h2, h2 {
     color: #798da3;
@@ -60,7 +77,7 @@
 /* Note Card */
 .noteSection {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-content: stretch;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,10 +85,25 @@
     width: 100%;
 }
 
+    .noteSection2 {
+        display: flex;
+        justify-content: center;
+        align-content: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 10px;
+        width: 100%;
+    }
+
 .note {
     width: 90%;
     margin-bottom: 15px;
 }
+
+    .note2 {
+        width: 80%;
+        margin-bottom: 15px;
+    }
 
 .noteTitle {
     font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;

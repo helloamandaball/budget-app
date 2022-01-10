@@ -20,18 +20,31 @@ export const NoteCard = ({ note, selectedBudget }) => {
         // const noteDueDate = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' }).format(formattedDate)
 
     return ( 
-        <div className="noteList">
-        <div className="noteSection" key={note.id}>
-            <div className="note">
-                <div className="noteTitle">{note.title}</div>  
-                {/* <div className = "noteDate">{noteDate}</div>  */}
-                <div className="noteMemo">{note.memo}</div>
+        // <div className="noteList">
+        //     <div className="noteSection" key={note.id}>
+        //         <div className="note">
+        //             <div className="noteTitle">{note.title}</div>  
+        //             {/* <div className = "noteDate">{noteDate}</div>  */}
+        //             <div className="noteMemo">{note.memo}</div>
+        //         </div>
+        //         <div className="noteEditDel">
+        //             <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${selectedBudget}/${note.id}`) }}>&#9998;</button>
+        //             <button className="noteDel" onClick={handleDelete}>&#128465;</button>
+        //         </div>
+        //     </div>
+        // </div>
+        <div className="noteList2">
+            <div className="noteSection2" key={note.id}>
+                <div className="note2">
+                    <div className="noteTitle">{note.title}</div>  
+                    {/* <div className = "noteDate">{noteDate}</div>  */}
+                    <div className="noteMemo">{note.memo}</div>
+                </div>
+                <div className="noteEditDel">
+                    <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${selectedBudget}/${note.id}`) }}>&#9998;</button>
+                    <button className="noteDel" onClick={handleDelete}>&#128465;</button>
+                </div>
             </div>
-            <div className="noteEditDel">
-                <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${selectedBudget}/${note.id}`) }}>&#9998;</button>
-                <button className="noteDel" onClick={handleDelete}>&#128465;</button>
-            </div>
-        </div>
         </div>
     )
 }

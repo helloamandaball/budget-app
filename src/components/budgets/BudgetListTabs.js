@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate, useParams } from "react-router-dom"
 import { BudgetContext } from "./BudgetDataProvider"
-import { BudgetMonth } from "./BudgetMonth"
+// import { BudgetMonth } from "./BudgetMonth"
 import "./Budget.css"
 
 export const BudgetListTabs = ({setSelectedBudget, selectedBudget}) => {
@@ -43,17 +43,17 @@ export const BudgetListTabs = ({setSelectedBudget, selectedBudget}) => {
 
     return (
         <>
-            <section className="startBudget">
+            {/* <section className="startBudget">
                 <ul className="startBudgetList">
                     <li className="newBudgetBtn">
                         <Link className="addBudget" to="/budgets/create/">
                             <button className="addBudgetBtn">NEW BUDGET+</button>
                         </Link>
-                    </li>
+                    </li> */}
                     {/* <BudgetMonth selectedBudget={selectedBudget}/> */}
-                </ul>
+                {/* </ul> */}
                 {/* Dropbox for budget select can go here - see extras.txt */}
-            </section>
+            {/* </section> */}
             <section className="budgetTabsDiv">
                 <div className="spacer">&nbsp;</div>
                 {budgets.filter(budget => budget.userId === +localStorage.activeUser).map(budget => {

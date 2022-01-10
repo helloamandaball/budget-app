@@ -17,7 +17,7 @@ export const NoteList = ({selectedBudget}) => {
   return (
     <>
       <section className="noteContainer">
-        <div className="noteHdr">
+        <div className="noteHdr2">
             <h2>NOTES</h2>
             <button className="addNoteBtn" onClick={() => navigate(`/notes/create/${selectedBudget}`)}>
                 +

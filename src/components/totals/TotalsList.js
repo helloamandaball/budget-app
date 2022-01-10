@@ -5,7 +5,6 @@ import "./Totals.css"
 export const TotalsList = ({selectedBudget}) => {
 
     return (
-         <TotalsCard selectedBudget={selectedBudget} />
+        <TotalsCard selectedBudget={selectedBudget} />
     )
-    
 }
