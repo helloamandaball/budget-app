@@ -44,7 +44,6 @@ export const NoteCard = ({ note, selectedBudget }) => {
                     <button className="noteEdit" onClick={() => { navigate(`/notes/edit/${selectedBudget}/${note.id}`) }}>&#9998;</button>
                     <button className="noteDel" onClick={handleDelete}>&#128465;</button>
                 </div>
-                <hr></hr>
             </div>
         </div>
     )

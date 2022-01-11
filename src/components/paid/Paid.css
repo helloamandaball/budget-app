@@ -10,8 +10,8 @@
 .billsPaidContainer {
     border-top: 1px solid #edf0f4;
     border-bottom: 1px solid #edf0f4;
-    padding: 20px 0 20px;
-    margin: 30px 0px 23px;
+    padding: 20px 0 20px 0;
+    margin: 30px 12px 23px 0;
 }
 
 .billsPaidList {
@@ -227,7 +227,7 @@ tr:nth-child(odd) {
 
 .amountDiv {
     width: 93%;
-    max-width: 400px;
+    max-width: 415px;
     display: flex;
     justify-content: flex-start;
     border: 1px solid #ced4da;
@@ -256,7 +256,8 @@ tr:nth-child(odd) {
 
 .yearSelectField {
     display: block;
-    width: 90%;
+    width: 77.5%;
+    max-width: 400px;
     height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -309,6 +310,7 @@ tr:nth-child(odd) {
 .typeSelectField {
     display: block;
     width: 95%;
+    max-width: 425px;
     height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;

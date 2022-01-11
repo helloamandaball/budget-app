@@ -51,7 +51,7 @@ export const NoteForm = () => {
 
     useEffect(() => {
         if (noteId) {
-                console.log("note ID:", noteId)
+                // console.log("note ID:", noteId)
             getNoteById(noteId)
                 .then(note => {
                     setNote(note)

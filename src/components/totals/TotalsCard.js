@@ -77,7 +77,7 @@ export const TotalsCard = ({ budget, selectedBudget }) => {
         <>
             <section className="totals">
                 {budgets.filter(budget => budget.id === selectedBudget).map(budget => {
-                    return <h2 className="totalsHdr">{budget.month} <span className="totalHdrYr">{budget.year}</span> Totals</h2>
+                    return <h2 className="totalsHdr"><span className="lightGrn"><sup>&#x24;</sup>&#x24;</span> {budget.month} <span className="totalHdrYr">{budget.year}</span> Totals</h2>
                 })}
                 <div className="totalsListContainer">
                     {/* <div className="totalsList">
