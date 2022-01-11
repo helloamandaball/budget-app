@@ -43,8 +43,10 @@ export const Login = (props) => {
 
             <section className="vertically-center">
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1><sup>&#x24;</sup>&#x24; Budget Tracker</h1>
-                    {/* <h3>Please sign in</h3> */}
+                    <div className="loginHdr">
+                        <h1><sup>&#x24;</sup>&#x24; Budget Tracker</h1>
+                        {/* <h3>Please sign in</h3> */}
+                    </div>
                     <div className="emailLogin">
                         <fieldset>
                             {/* <label htmlFor="inputEmail"> Enter your email </label> */}
