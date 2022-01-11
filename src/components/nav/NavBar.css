@@ -10,8 +10,8 @@
     vertical-align: middle;
     background-color: #3863a0;
     height: 60px;
-    width: 94%;
-    margin: auto;
+    width: 94.6%;
+    margin: 0 auto 40px;
     padding: 0 24px;
 }
 
@@ -21,7 +21,7 @@
     flex-shrink: 1; */
     width: 25%;
     align-self: center;
-    padding: 2px 0px 0px 10px;
+    padding: 2px 5px 0px 0px;
     margin: auto;
 }
 
@@ -61,6 +61,8 @@
     margin: 0;
 }
 
+
+/* Logout Button */
 .logoutBtnDiv {
     width: 76px;
     margin: auto 0px auto 0px;
@@ -149,27 +151,6 @@ nav {
     border-radius: 2px;
 }
 
-/* .addBudgetBtn {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    height: 28px;
-    width: 120px;
-    color: #3863a0;
-    background-color: #61e5b4;
-    border: 1px solid #8fec9b;
-    border-radius: 2px;
-    box-shadow: 1px 2px 8px #d4d4d4;
-    padding: 1px 5px 2px;
-    margin: 0 0 4px;
-}
-
-.addBudgetBtn:hover{
-    color: #fff;
-    border-color: #5cbfed;
-    background-color: #5cbfed;
-    padding-bottom: 0px;
-} */
 
 .searchIcon {
     width: 24px;
@@ -197,3 +178,51 @@ nav {
     background-color: #fff;
     margin: auto;
 }
+
+
+/* Add Budget */
+.startBudget {
+    /* background-color: #eef1f5; */
+    /* display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    margin: 10px 0px 15px; */
+}
+
+.startBudgetList {
+    background-color: transparent;
+    width: 130px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+    .addBudgetBtn {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        height: 28px;
+        width: 140px;
+        color: #FFF;
+        border-color: #5cbfed;
+        background-color: #5cbfed;
+        border-radius: 2px;
+        /* box-shadow: 1px 2px 8px #d4d4d4; */
+        padding: 1px 5px 0px;
+        margin: 0;
+    }
+
+    .addBudgetBtn:hover{
+        color: #3863a0;
+        background-color: #61e5b4;
+        border: 1px solid #8fec9b;
+        /* box-shadow: 1px 2px 8px #d4d4d4; */
+        padding-bottom: 2px;
+    }

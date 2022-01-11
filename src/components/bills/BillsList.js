@@ -34,14 +34,12 @@ export const BillsList = ({selectedBudget}) => {
                 </div>
                 <div className="bills">
                         {/* {console.log("BillList: Render", bills)} */}
-                    {
-                    //filter bills for those not yet complete, then sort through those and put them in date order, then map to return BillCard
-                    bills.filter(bill => bill.budgetId === selectedBudget).filter(bill => bill.paid === false).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => {
+                    {/* //filter bills for those not yet complete, then sort through those and put them in date order, then map to return BillCard */}
+                    {bills.filter(bill => bill.userId === +localStorage.activeUser).filter(bill => bill.budgetId === selectedBudget).filter(bill => bill.paid === false).sort((a,b) => {return new Date(a.date) - new Date (b.date)}).map(bill => {
                         const typeOfBill = billTypes.find(type => type.id === bill.typeId)
 
                        return <BillCard key={bill.id} bill={bill} typeOfBill={typeOfBill} selectedBudget={selectedBudget} />
-                    })
-                    }
+                    })}
                 </div>
             </div>
         </>

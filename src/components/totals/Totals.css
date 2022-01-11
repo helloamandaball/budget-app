@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
-.h2, h2 {
+/* .h2, h2 {
     color: #798da3;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 600;
     padding:0;
     margin:0;
-}
+} */
 
 .totalsBox {
     display: flex;
@@ -15,17 +15,32 @@
 .totals {
     width: 100%;
     max-width: 350px;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.totalsListContainer {
-    display: flex;
     border: 1px solid #c9d3dd;
     border-radius: 10px 0 10px 10px;
     background-color: #f0fff1;
     box-shadow: 5px 5px 10px #e2e2e2;
-    padding: 20px 3px 20px 20px;
+    margin: 0;
+}
+
+.totalsHdr {
+    font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #59daaa;
+    text-shadow: 2px 1px 3px #e8e8e8;
+    /* text-transform: uppercase; */
+    padding: 10px 0 0 18px;
+    margin:0px;
+}
+
+.totalHdrYr{
+    font-size: 28px;
+}
+
+.totalsListContainer {
+    display: flex;
+    max-width: 340px;
+    padding: 1px 3px 15px 15px;
 }
 
     .totalsList {
@@ -45,13 +60,14 @@
         text-align: right;
     }
 
-    .totalBudget {
+.totalBudget {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 22px;
+        font-size: 21px;
         line-height: normal;
         font-weight: 500;
         letter-spacing: -0.4px;
         color: #798da3;
+        padding-bottom: 7px;
         margin: 0 0 10px;
     }
 
@@ -61,38 +77,74 @@
         line-height: normal;
         font-weight: 600;
         color: #798da3;
+        padding-bottom: 7px;
         margin: 0;
     }
 
-    .totalPending, .totalPaid {
+.totalPending {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-size: 16px;
         line-height: normal;
         font-weight: 400;
         color: #798da3;
+        padding-bottom: 7px;
         margin: 0 0 10px;
     }
 
-    .totalRemaining {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: normal;
-        font-weight: 400;
-        color: #798da3;
-        margin: 0;
-    }
-
-    .pendingAmount, .paidAmount, .remainingAmount {
+    .pendingAmount {
         font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
         font-size: 19px;
         line-height: normal;
         font-weight: 500;
         color: #798da3;
+        padding-bottom: 7px;
         margin: 0;
-
     }
 
-    .totalsEditBtn {
+.totalPaid {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 400;
+        color: #798da3;
+        padding-bottom: 7px;
+        margin: 0 0 10px;
+    }
+
+    .paidAmount {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        line-height: normal;
+        font-weight: 500;
+        color: #798da3;
+        border-bottom: 1px solid #798da3;
+        padding-bottom: 7px;
+        margin-bottom: 3px;
+    }
+
+.totalRemaining {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 400;
+        color: #798da3;
+        padding-top: 3px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .remainingAmount {
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        line-height: normal;
+        font-weight: 500;
+        color: #798da3;
+        padding-top: 3px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    /* .totalsEditBtn {
         background-color: transparent;
         border: none;
         font-size: 19px;
@@ -106,7 +158,8 @@
     .totalsEditBtn:hover {
         background-color: transparent;
         color: #798da3;
-    } 
+    }  */
+
 
 /* Form Styling */
 .cancelBtn{
@@ -129,3 +182,11 @@
     .cancelBtn:hover {
         background-color: #61e5b4;
     }
+
+
+/* Progress Bar */
+.progressBar {
+    width: 100%;
+    height: 30px;
+    margin: 20px 20px;
+}

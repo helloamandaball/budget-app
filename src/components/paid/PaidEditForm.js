@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from 'react-router-dom';
 import { BillsContext } from "../bills/BillsDataProvider"
 import { BillTypesContext } from "../bills/BillTypesDataProvider";
+import { BudgetContext } from "../budgets/BudgetDataProvider";
 import "../bills/Bills.css"
 
 export const PaidEditForm = () => {
     const { getBillById, updateBill } = useContext(BillsContext)
     const { billTypes, getBillTypes } = useContext(BillTypesContext)
+    const { selectedBudget, setSelectedBudget } = useContext(BudgetContext)
 
     const [bill, setBill] = useState({})
     const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +29,7 @@ export const PaidEditForm = () => {
         } else {
             setIsLoading(true);
             if (billId) {
+                setSelectedBudget(parseInt(budgetId))
                 //PUT - update bill
                 updateBill({
                     id: bill.id,
@@ -47,11 +50,11 @@ export const PaidEditForm = () => {
     useEffect(() => {
         getBillTypes().then(() => {
             if (billId) {
-                  console.log("bill ID:", billId)
+                //   console.log("bill ID:", billId)
                 getBillById(billId)
                     .then(bill => {
                         setBill(bill)
-                          console.log("bill ID:", billId)
+                        //   console.log("bill ID:", billId)
                         setIsLoading(false)
                     })
             } else {
@@ -61,69 +64,75 @@ export const PaidEditForm = () => {
     }, [])
 
     return (
-        <form className="billForm">
-            <h2 className="billForm__title">EDIT PAID BILL</h2>
-            <button className="cancelBtn" onClick={() => navigate("/")}>
-                X
-            </button>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Bill name: </label>
-                    <input type="text" id="name" name="name" required autoFocus className="form-control" maxLength="18"
-                        placeholder="Bill name"
-                        onChange={handleControlledInputChange}
-                        defaultValue={bill.name} />
+        <section className="bg">
+            <form className="billForm">
+                <div className="billFormHdrDiv">
+                    <h2 className="billFormTitle">EDIT PAID BILL</h2>
+                    <button className="cancelBtn" onClick={() => navigate("/")}>
+                        X
+                    </button>
                 </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="amount">Amount due: </label>
-                    <br />
-                    $<input type="number" id="amount" name="amount" required className="form-control"
-                        placeholder="Amount due"
-                        onChange={handleControlledInputChange}
-                        defaultValue={bill.amount} />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="date">Due date: </label>
-                    <input type="date" id="date" name="date" required className="form-control"
-                        onChange={handleControlledInputChange}
-                        defaultValue={bill.date} />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="typeId">Bill type: </label>
-                    <select value={bill.typeId} name="typeId" id="typeId" className="form-control"
-                        onChange={handleControlledInputChange}>
-                        <option value="0">Select a bill type</option>
-                        {billTypes.sort((a, b) => a.name.localeCompare(b.name)).map(type => (
-                            <option key={type.id} value={type.id}>
-                                {type.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="memo">Memo: </label>
-                    <input type="text" id="memo" name="memo" required autoFocus className="form-control" maxLength="100"
-                        placeholder="Add memo here"
-                        onChange={handleControlledInputChange}
-                        defaultValue={bill.memo} />
-                </div>
-            </fieldset>
-            <button className="btn btn-primary"
-                disabled={isLoading}
-                onClick={event => {
-                    event.preventDefault() // Prevent browser from submitting the form and refreshing the page
-                    handleSaveBill()
-                }}>
-                SAVE
-            </button>
-        </form>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="name" className="Label">Bill name: </label>
+                        <input type="text" id="name" name="name" required autoFocus className="billSelectField" maxLength="18"
+                            placeholder="Bill name"
+                            onChange={handleControlledInputChange}
+                            defaultValue={bill.name} />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="amount" className="Label">Amount due: </label>
+                        <div className="amountDiv">
+                            <p className="amountDollarSign">$</p>
+                            <input type="number" id="amount" name="amount" required className="amountSelectField"
+                            placeholder="Amount due"
+                            onChange={handleControlledInputChange}
+                            defaultValue={bill.amount} />
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group" className="Label">
+                        <label htmlFor="date">Due date: </label>
+                        <input type="date" id="date" name="date" required className="monthSelectField"
+                            onChange={handleControlledInputChange}
+                            defaultValue={bill.date} />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="typeId" className="Label">Bill type: </label>
+                        <select value={bill.typeId} name="typeId" id="typeId" className="typeSelectField"
+                            onChange={handleControlledInputChange}>
+                            <option value="0">Select a bill type</option>
+                            {billTypes.sort((a, b) => a.name.localeCompare(b.name)).map(type => (
+                                <option key={type.id} value={type.id}>
+                                    {type.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="memo" className="Label">Memo: </label>
+                        <input type="text" id="memo" name="memo" required autoFocus className="memoSelectField" maxLength="100"
+                            placeholder="Add memo here"
+                            onChange={handleControlledInputChange}
+                            defaultValue={bill.memo} />
+                    </div>
+                </fieldset>
+                <button className="saveBtn"
+                    disabled={isLoading}
+                    onClick={event => {
+                        event.preventDefault() // Prevent browser from submitting the form and refreshing the page
+                        handleSaveBill()
+                    }}>
+                    SAVE
+                </button>
+            </form>
+        </section>
     )
 }

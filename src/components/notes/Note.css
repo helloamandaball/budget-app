@@ -21,12 +21,29 @@
     margin: 0 0 10px 0;
 }
 
+    .noteList2 {
+        border: 1px solid #c9d3dd;
+        background-color: #FFF;
+        border-radius: 10px 0px 10px 10px;
+        width: 96%;
+        padding: 5px 5px 15px 10px;
+        margin: 0 0 10px 0;
+    }
+
 .noteHdr {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     height: 40px;
 }
+
+    .noteHdr2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 40px;
+        margin-top: 30px;
+    }
 
 .h2, h2 {
     color: #798da3;
@@ -60,7 +77,7 @@
 /* Note Card */
 .noteSection {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-content: stretch;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,10 +85,30 @@
     width: 100%;
 }
 
+    .noteSection2 {
+        display: flex;
+        justify-content: center;
+        align-content: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        width: 100%;
+    }
+    
+    .noteBorder {
+        border-bottom: 1px dotted #c9d3dd;
+        margin-bottom: 5px;
+    }
+
 .note {
     width: 90%;
     margin-bottom: 15px;
 }
+
+    .note2 {
+        width: 80%;
+        margin-bottom: 0px;
+    }
 
 .noteTitle {
     font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
@@ -81,7 +118,7 @@
     font-kerning: normal;
     letter-spacing: normal;
     color: #798da3;
-    margin: 8px 0 0;
+    margin: 7px 0 0;
 }
 
 .noteDate {
@@ -107,10 +144,12 @@
     margin: 0 0 0 3px;
 }
 
-.noteEdit, .noteDel {
+.noteEdit {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: transparent;
     border: none;
     font-size: 19px;
+    font-weight: normal;
     color: #c9d3dd;
     width: 24px;
     height: 24px;
@@ -118,10 +157,23 @@
     margin: 0;
 }
 
-.noteEdit:hover, .noteDel:hover {
+.noteDel {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: transparent;
-    color: #798da3;
-} 
+    border: none;
+    font-size: 19px;
+    font-weight: bold;
+    color: #c9d3dd;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+    .noteEdit:hover, .noteDel:hover {
+        background-color: transparent;
+        color: #798da3;
+    } 
 
 .noteEditDel {
     width: 50px;
@@ -130,9 +182,234 @@
     margin-bottom: auto;
 }
 
-/* Note Form */
-.memoField {
-    width: 85%;
-    height: 100px;
-    overflow:  hidden;
+
+/* Form Styling */
+
+.bg {
+    background-color: #eef1f5;
+    height: 100vh;
+    padding: 30px;
 }
+
+.cancelBtn{
+    background-color: #5cbfed;
+    border: 1px solid #cdf5de;
+    border-radius: 50%;
+    height:28px;
+    width: 28px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+    color: #FFF;
+    /* color: #3863a0; */
+    box-shadow: 1px 2px 8px #cfcfcf;
+    padding: 0 1px 0 0;
+    margin: 5px 15px 0px auto;
+}
+    .cancelBtn:hover {
+        background-color: #61e5b4;
+    }
+
+
+.noteForm {
+    width: 50%;
+    max-width: 500px;
+    min-width: 300px;
+    border: 1px solid #c9d3dd;
+    background-color: #FFF;
+    border-radius: 10px 0px 10px 10px;
+    padding: 15px 5px 30px 30px;
+    margin: 30px auto;
+}
+
+.noteFormHdrDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.noteFormTitle {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 0;
+    margin: 10px 0 8px;
+}
+
+#month, #date, #typeId {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#year, #amount, #name, #memo {
+    color: #798da3;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.Label {
+    color: #798da3;
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.amountDollarSign {
+    color: #798da3;
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 0 0 3px 0;
+    margin: auto 0;
+}
+
+.amountDiv {
+    width: 93%;
+    max-width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding-left: 10px;
+}
+
+.monthSelectField {
+    display: block;
+    width: 60%;
+    max-width: 300px;
+    min-width: 250px;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.yearSelectField {
+    display: block;
+    width: 90%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0;
+}
+
+.amountSelectField {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0;
+}
+
+.noteSelectField, .memoSelectField {
+    display: block;
+    width: 90%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0;
+}
+
+.typeSelectField {
+    display: block;
+    width: 90%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0;
+}
+
+.noteMemoSelectField {
+    display: block;
+    overflow: hidden;
+    width: 90%;
+    height: 100px !important;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0;
+}
+
+.noteMemoSelectField:hover {
+    overflow-y: scroll;
+}
+
+.saveBtn {
+    font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #3863a0;
+    background-color: #8fec9b;
+    border: 1px solid #cdf5de;
+    border-radius: 4px;
+    height: 38px;
+    width: 100px;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    padding: 2px 2px 5px;
+    margin: 15px 0 0;
+}
+    .saveBtn:hover, .saveBtn:focus {
+        background-color: #61e5b4;
+        color: #FFF;
+        padding: 2px 2px 3px;
+        /* background-image: linear-gradient(#8fec9b, #61e5b4 ); */
+    }

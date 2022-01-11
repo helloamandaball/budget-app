@@ -1,11 +1,13 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { BudgetContext } from "./BudgetDataProvider"
+// import { BudgetMonth } from "./BudgetMonth"
 import "./Budget.css"
 
-export const BudgetListTabs = ({setSelectedBudget}) => {
+export const BudgetListTabs = ({setSelectedBudget, selectedBudget}) => {
     const { budgets, getBudgets, deleteBudget } = useContext(BudgetContext)
+    const [ clickedBudgetStyle, setClickedBudgetStyle ] = useState("moYrTab")
 
     const navigate = useNavigate();
     
@@ -26,24 +28,40 @@ export const BudgetListTabs = ({setSelectedBudget}) => {
     //       })
     // }
 
+    // const { isClicked } = useParams();
+    const handleClickedBudget = () => {
+        // highlight the tab of the budget currently displayed in dashboard by changing (or adding) className
+        // if (isClicked) {
+        //     console.log("you've been clicked!")
+        //     setClickedBudgetStyle("moYrTab-clicked")
+        // } else {
+        //     setClickedBudgetStyle("moYrTab")
+        // }
+        console.log("you've been clicked!")
+            setClickedBudgetStyle("moYrTab-clicked")
+    }
+
     return (
         <>
-            <section className="startBudget">
+            {/* <section className="startBudget">
                 <ul className="startBudgetList">
                     <li className="newBudgetBtn">
                         <Link className="addBudget" to="/budgets/create/">
                             <button className="addBudgetBtn">NEW BUDGET+</button>
                         </Link>
-                    </li>
-                </ul>
+                    </li> */}
+                    {/* <BudgetMonth selectedBudget={selectedBudget}/> */}
+                {/* </ul> */}
                 {/* Dropbox for budget select can go here - see extras.txt */}
-            </section>
+            {/* </section> */}
             <section className="budgetTabsDiv">
                 <div className="spacer">&nbsp;</div>
-                {budgets.map(budget => {
+                {budgets.filter(budget => budget.userId === +localStorage.activeUser).map(budget => {
                     return (  
                         <>
-                            <div className="moYrTab">
+                        
+                            <div className={clickedBudgetStyle} onClick={handleClickedBudget}>
+
                                 <div className="tabLink" onClick={() => setSelectedBudget(budget.id)}>
                                     <div className="moYrText">
                                         <h4>{budget.month}</h4>
