@@ -32,7 +32,7 @@ export const NavBar = (props) => {
                 </div>
                 <div className="hdrTitleDiv">
                     <Link to="/" className="hdrTitle">
-                        <h2 className="hdrTitle">Budget Tracker</h2>
+                        <h2 className="hdrTitle"><sup>&#x24;</sup>&#x24; Budget Tracker</h2>
                     </Link>
                 </div>
                 {/* <div className="logoutBtnDiv">

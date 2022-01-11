@@ -64,47 +64,51 @@ export const NoteForm = () => {
     }, [])
 
     return (
-        <form className="noteForm">
-            <h2 className="noteForm__title">
-                {noteId ? <>EDIT NOTE</> : <>NEW NOTE</>}
-            </h2>
-            <button className="cancelBtn" onClick={() => navigate("/")}>
-                X
-            </button>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="title">Note title: </label>
-                    <input type="text" id="title" name="title" required autoFocus className="form-control" maxLength="30"
-                        placeholder="Note title"
-                        onChange={handleControlledInputChange}
-                        defaultValue={note.title} />
+        <section className="bg">
+            <form className="noteForm">
+                <div className="noteFormHdrDiv">
+                    <h2 className="noteFormTitle">
+                        {noteId ? <>EDIT NOTE</> : <>NEW NOTE</>}
+                    </h2>
+                    <button className="cancelBtn" onClick={() => navigate("/")}>
+                        X
+                    </button>
                 </div>
-            </fieldset>
-            {/* <fieldset>
-                <div className="form-group">
-                    <label htmlFor="date">Date: </label>
-                    <input type="date" id="date" name="date" className="form-control"
-                        onChange={handleControlledInputChange}
-                        defaultValue={note.date} />
-                </div>
-            </fieldset> */}
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="memo">Memo: </label>
-                    <input type="text" id="memo" name="memo" className="memoField"
-                        placeholder="Add memo here"
-                        onChange={handleControlledInputChange}
-                        defaultValue={note.memo} />
-                </div>
-            </fieldset>
-            <button className="btn btn-primary"
-                disabled={isLoading}
-                onClick={event => {
-                    event.preventDefault() // Prevent browser from submitting the form and refreshing the page
-                    handleSaveNote()
-                }}>
-                {noteId ? <>Save Note</> : <>Add Note</>}
-            </button>
-        </form>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="title" className="Label">Note title: </label>
+                        <input type="text" id="title" name="title" required autoFocus className="typeSelectField" maxLength="30"
+                            placeholder="Note title"
+                            onChange={handleControlledInputChange}
+                            defaultValue={note.title} />
+                    </div>
+                </fieldset>
+                {/* <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="date">Date: </label>
+                        <input type="date" id="date" name="date" className="form-control"
+                            onChange={handleControlledInputChange}
+                            defaultValue={note.date} />
+                    </div>
+                </fieldset> */}
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="memo" className="Label">Memo: </label>
+                        <textarea type="text" id="memo" name="memo" className="noteMemoSelectField"
+                            placeholder="Add memo here"
+                            onChange={handleControlledInputChange}
+                            defaultValue={note.memo}></textarea>
+                    </div>
+                </fieldset>
+                <button className="saveBtn"
+                    disabled={isLoading}
+                    onClick={event => {
+                        event.preventDefault() // Prevent browser from submitting the form and refreshing the page
+                        handleSaveNote()
+                    }}>
+                    {noteId ? <>Save Note</> : <>Add Note</>}
+                </button>
+            </form>
+        </section>
     )
 }

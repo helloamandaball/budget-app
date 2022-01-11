@@ -62,15 +62,15 @@ export const TotalsCard = ({ budget, selectedBudget }) => {
             return remTotal.toFixed(2)
     }
 
-    const totalPaidAndPending = () => {
-        // let budgetAmount = budgets.find(budgetObj => budgetObj.id === selectedBudget)
-        let unpaidAmounts = bills.filter(bill => bill.paid === false).filter(bill => bill.budgetId === selectedBudget).map(bill => bill.amount)
-        let paidAmounts = bills.filter(bill => bill.paid === true).filter(bill => bill.budgetId === selectedBudget).map(bill => bill.amount)
+    // const totalPaidAndPending = () => {
+    //     // let budgetAmount = budgets.find(budgetObj => budgetObj.id === selectedBudget)
+    //     let unpaidAmounts = bills.filter(bill => bill.paid === false).filter(bill => bill.budgetId === selectedBudget).map(bill => bill.amount)
+    //     let paidAmounts = bills.filter(bill => bill.paid === true).filter(bill => bill.budgetId === selectedBudget).map(bill => bill.amount)
 
-        let sumPaidPending = unpaidAmounts.length += paidAmounts.length;
-        // let totalAccountedFor = budgetAmount -= sumPaidPending;
-        return sumPaidPending
-    }
+    //     let sumPaidPending = unpaidAmounts.length += paidAmounts.length;
+    //     // let totalAccountedFor = budgetAmount -= sumPaidPending;
+    //     return sumPaidPending
+    // }
 
 
     return(

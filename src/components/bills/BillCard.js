@@ -31,10 +31,10 @@ export const BillCard = ({ bill, typeOfBill, selectedBudget }) => {
     // }
     // const seeDetails=this.state.billDetails;
 
-    const [showDetails, setShowDetails] = useState(false);
+    // const [showDetails, setShowDetails] = useState(false);
     // const handleHideDetails = () => setShowDetails(false);
     // const handleShowDetails = () => setShowDetails(true);
-    const handleShowDetails = () => setShowDetails(!showDetails)
+    // const handleShowDetails = () => setShowDetails(!showDetails)
 
     //Use to format date into MM/DD/YYYY
     const formattedDate = new Date(bill.date);
