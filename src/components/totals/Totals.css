@@ -14,11 +14,12 @@
 
 .totals {
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     border: 1px solid #c9d3dd;
     border-radius: 10px 0 10px 10px;
     background-color: #f0fff1;
     box-shadow: 5px 5px 10px #e2e2e2;
+    padding: 3px 0 10px 0;
     margin: 0;
 }
 
@@ -29,7 +30,7 @@
     color: #59daaa;
     text-shadow: 2px 1px 3px #e8e8e8;
     /* text-transform: uppercase; */
-    padding: 10px 0 0 18px;
+    padding: 12px 0 0 14px;
     margin:0px;
 }
 
@@ -37,10 +38,19 @@
     font-size: 28px;
 }
 
+.lightGrn {
+    font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #aeecc9;
+}
+
 .totalsListContainer {
     display: flex;
+    justify-content: flex-end;
     max-width: 340px;
     padding: 1px 3px 15px 15px;
+    margin: 0 20px 0 auto;
 }
 
     .totalsList {

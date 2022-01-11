@@ -74,3 +74,16 @@
 
             .reduce((total) => total + bill.amount, 0)
             .reduce((previousValue, currentValue) => previousValue + currentValue.amount)
+
+
+        //Start section (New Budget Button and a dropdown menu) that was in the BudgetListTab.js file:
+            <section className="startBudget">
+                <ul className="startBudgetList">
+                    <li className="newBudgetBtn">
+                        <Link className="addBudget" to="/budgets/create/">
+                            <button className="addBudgetBtn">NEW BUDGET+</button>
+                        </Link>
+                    </li>
+                </ul> 
+                {/* Dropbox for budget select can go here - see extras.txt */}
+            </section> 

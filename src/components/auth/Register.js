@@ -54,23 +54,23 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
 
-            <dialog className="dialog dialog--password" ref={conflictDialog}>
-                <div>Account with that email address already exists</div>
-                <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
+            <dialog className="dialog dialog--password alertBox" ref={conflictDialog}>
+                <div className="alertTxt">Account with that email address already exists</div>
+                <button className="signInBtn" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register</h1>
                 <fieldset>
-                    <label htmlFor="username"> Username </label>
-                    <input ref={username} type="text" name="username" className="form-control" placeholder="Username" required autoFocus />
+                    <label htmlFor="username" className="Label"> Username </label>
+                    <input ref={username} type="text" name="username" id="username" className="typeSelectField" placeholder="Username" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
-                    <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
+                    <label htmlFor="inputEmail" className="Label"> Email address </label>
+                    <input ref={email} type="email" name="email" id="email" className="typeSelectField" placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button className="signInBtn" type="submit"> Sign in </button>
                 </fieldset>
             </form>
         </main>

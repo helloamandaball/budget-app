@@ -12,7 +12,7 @@ export const Dashboard = () => {
     return (
         <>
             <section>
-                <BudgetListTabs setSelectedBudget={setSelectedBudget}/>
+                <BudgetListTabs setSelectedBudget={setSelectedBudget} selectedBudget={selectedBudget}/>
             </section>
 
             <section className="main">
