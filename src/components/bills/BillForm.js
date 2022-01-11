@@ -133,7 +133,7 @@ export const BillForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="memo" className="Label">Memo: </label>
-                        <input type="text" id="memo" name="memo" required autoFocus className="memoSelectField" maxLength="100"
+                        <input type="text" id="memo" name="memo" required className="memoSelectField" maxLength="100"
                             placeholder="Add memo here"
                             onChange={handleControlledInputChange}
                             defaultValue={bill.memo} />

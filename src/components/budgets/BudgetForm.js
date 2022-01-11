@@ -73,7 +73,7 @@ export const BudgetForm = () => {
                 </div>
                 <fieldset>
                     <div className="form-group">
-                        <select value={budget.month} name="month" id="month" className="monthSelectField"
+                        <select value={budget.month} name="month" id="month" required autoFocus className="monthSelectField"
                         onChange={handleControlledInputChange}>
                             <option value="0">Select a month</option>
                                 <option value="January">January</option>

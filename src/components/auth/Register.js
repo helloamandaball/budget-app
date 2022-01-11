@@ -58,21 +58,22 @@ export const Register = (props) => {
                 <div className="alertTxt">Account with that email address already exists</div>
                 <button className="signInBtn" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
-
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register</h1>
-                <fieldset>
-                    <label htmlFor="username" className="Label"> Username </label>
-                    <input ref={username} type="text" name="username" id="username" className="typeSelectField" placeholder="Username" required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="inputEmail" className="Label"> Email address </label>
-                    <input ref={email} type="email" name="email" id="email" className="typeSelectField" placeholder="Email address" required />
-                </fieldset>
-                <fieldset>
-                    <button className="signInBtn" type="submit"> Sign in </button>
-                </fieldset>
-            </form>
+            <section className="bg">
+                <form className="loginForm" onSubmit={handleRegister}>
+                    <h2 className="registerHdr">Please Register</h2>
+                    {/* <fieldset>
+                        <label htmlFor="username" className="loginLabel"> Username </label>
+                        <input ref={username} type="text" name="username" id="username" className="usernameSelectField" placeholder="Username" required autoFocus />
+                    </fieldset> */}
+                    <fieldset>
+                        <label htmlFor="inputEmail" className="loginLabel"> Email address </label>
+                        <input ref={email} type="email" name="email" id="email" className="emailSelectField" placeholder="Email address" required autoFocus/>
+                    </fieldset>
+                    <fieldset>
+                        <button className="signInBtn" type="submit"> Sign up </button>
+                    </fieldset>
+                </form>
+            </section>
         </main>
     )
 }
