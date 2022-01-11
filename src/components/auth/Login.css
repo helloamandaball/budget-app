@@ -8,9 +8,39 @@
     text-align: center;
    }
 
+   .registerHdr {
+        font-family: 'Satisfy', Georgia, 'Times New Roman', Times, serif;
+       font-size: 30px;
+       font-weight: normal;
+       color: #3863a0;
+       margin-top: 10px;
+       margin-bottom: 10px;
+   }
+
+   .loginForm {
+       text-align: left;
+        width: 60%;
+        max-width: 500px;
+        min-width: 300px;
+        border: 1px solid #c9d3dd;
+        background-color: #FFF;
+        border-radius: 10px 0px 10px 10px;
+        padding: 20px 5px 30px 30px;
+        margin: 30px auto;
+   }
+
    .loginHdr{
        padding-right: 30px;
    }
+
+   .loginLabel {
+        color: #798da3;
+        font-family: 'Barlow Semi Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 16px;
+    }
    
    fieldset {
     min-width: 0;
@@ -172,10 +202,27 @@
     font-size: 16px;
 }
 
-.typeSelectField {
+.usernameSelectField {
     display: block;
-    width: 95%;
-    max-width: 425px;
+    width: 400px;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0;
+}
+
+.emailSelectField {
+    display: block;
+    width: 90%;
+    max-width: 415px;
     height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;

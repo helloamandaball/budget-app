@@ -104,7 +104,7 @@ export const PaidEditForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="typeId" className="Label">Bill type: </label>
-                        <select value={bill.typeId} name="typeId" id="typeId" className="typeSelectField"
+                        <select value={bill.typeId} name="typeId" id="typeId" required autoFocusclassName="typeSelectField"
                             onChange={handleControlledInputChange}>
                             <option value="0">Select a bill type</option>
                             {billTypes.sort((a, b) => a.name.localeCompare(b.name)).map(type => (
@@ -118,7 +118,7 @@ export const PaidEditForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="memo" className="Label">Memo: </label>
-                        <input type="text" id="memo" name="memo" required autoFocus className="memoSelectField" maxLength="100"
+                        <input type="text" id="memo" name="memo" className="memoSelectField" maxLength="100"
                             placeholder="Add memo here"
                             onChange={handleControlledInputChange}
                             defaultValue={bill.memo} />
