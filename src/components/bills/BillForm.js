@@ -121,7 +121,7 @@ export const BillForm = () => {
                         <label htmlFor="typeId" className="Label">Bill type: </label>
                         <select value={bill.typeId} name="typeId" id="typeId" className="typeSelectField"
                             onChange={handleControlledInputChange}>
-                            <option value="0">Select a bill type</option>
+                            <option value="0" className="selectTextStyle">Select a bill type</option>
                             {billTypes.sort((a, b) => a.name.localeCompare(b.name)).map(type => (
                                 <option key={type.id} value={type.id}>
                                     {type.name}
@@ -133,10 +133,10 @@ export const BillForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="memo" className="Label">Memo: </label>
-                        <input type="text" id="memo" name="memo" required className="memoSelectField" maxLength="100"
+                        <textarea type="text" id="memo" name="memo" required className="memoSelectField" maxLength="100"
                             placeholder="Add memo here"
                             onChange={handleControlledInputChange}
-                            defaultValue={bill.memo} />
+                            defaultValue={bill.memo}></textarea>
                     </div>
                 </fieldset>
                 <button className="saveBtn"

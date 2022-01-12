@@ -11,7 +11,7 @@
     background-color: #3863a0;
     height: 70px;
     width: 96%;
-    margin: 0 auto 40px;
+    margin: 0 auto 0px;
     padding: 0 24px;
 }
 
@@ -19,7 +19,7 @@
     /* flex-basis: 30%; */
     /* flex-grow: 2;
     flex-shrink: 1; */
-    width: 25%;
+    width: 35%;
     align-self: center;
     padding: 0px 5px 3px 0px;
     margin: auto;
@@ -181,13 +181,13 @@ nav {
 
 
 /* Add Budget */
-.startBudget {
-    /* background-color: #eef1f5; */
-    /* display: flex;
+/* .startBudget {
+    background-color: #eef1f5; 
+     display: flex;
     justify-content: flex-start;
     padding: 10px 0px;
-    margin: 10px 0px 15px; */
-}
+    margin: 10px 0px 15px;
+} */
 
 .startBudgetList {
     background-color: transparent;

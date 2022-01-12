@@ -38,6 +38,7 @@ export const PaidCard = ({ bill, selectedBudget }) => {
             <td className="paidBillNameColumn">{bill.name}</td>  
             <td className="paidBillDateColumn">{billDueDate}</td> 
             <td className="paidBillAmountColumn">${bill.amount.toFixed(2)}</td>
+            <td className="emptyColumnSpacer">&nbsp;</td>
             <td className="paidBillEditDel">
                 <button className="paidBillEdit" onClick={() => { navigate(`/paid/edit/${selectedBudget}/${bill.id}`) }}>&#9998;</button>
                 <button className="paidBillDel" onClick={handleDelete}>&#128465;</button>
