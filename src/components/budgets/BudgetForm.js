@@ -47,17 +47,17 @@ export const BudgetForm = () => {
 
     useEffect(() => {
         if (budgetId) {
-                console.log("budget ID:", budgetId)
+                // console.log("budget ID:", budgetId)
             getBudgetById(budgetId)
                 .then(budget => {
                     setBudget(budget)
-                        console.log("budget ID:", budgetId)
+                        // console.log("budget ID:", budgetId)
                     setIsLoading(false)
                 })
         } else {
             setIsLoading(false)
         }
-        console.log("is this working?")
+        // console.log("is this working?")
     }, [])
 
     return (

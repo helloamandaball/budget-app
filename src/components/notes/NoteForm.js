@@ -77,7 +77,7 @@ export const NoteForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="title" className="Label">Note title: </label>
-                        <input type="text" id="title" name="title" required autoFocus className="typeSelectField" maxLength="30"
+                        <input type="text" id="title" name="title" required autoFocus className="billSelectField" maxLength="30"
                             placeholder="Note title"
                             onChange={handleControlledInputChange}
                             defaultValue={note.title} />

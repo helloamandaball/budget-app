@@ -11,7 +11,8 @@
     border-top: 1px solid #edf0f4;
     border-bottom: 1px solid #edf0f4;
     padding: 20px 0 20px 0;
-    margin: 30px 12px 23px 0;
+    margin: 30px 0px 23px 0;
+    max-width: 650px;
 }
 
 .billsPaidList {
@@ -21,13 +22,18 @@
     justify-content: flex-start;
     gap: 5px 10px;
     margin-top: 5px;
+    max-width: 650px;
 }
 
 .billsPaid {
-    flex-basis: 70vw;
+    flex-basis: 60vw;
     padding: 0;
     /* border: 1px dashed #1e3250; */
     color: gray;
+}
+
+.billPaidColumn {
+    width: 50px;
 }
 
 .paidBillNameColumn {
@@ -65,6 +71,10 @@
     color: #798da3;
     padding-left: 5px;
     padding-right: 15px;
+}
+
+.emptyColumnSpacer {
+    width: 1%;
 }
 
 .paidBillEdit {
@@ -143,7 +153,7 @@ tr:nth-child(odd) {
 .bg {
     background-color: #eef1f5;
     height: 100vh;
-    padding: 30px;
+    padding: 20px 30px 30px;
 }
 
 .cancelBtn{
@@ -274,7 +284,7 @@ tr:nth-child(odd) {
 
 .amountSelectField {
     display: block;
-    width: 90%;
+    width: 91%;
     max-width: 400px;
     height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
@@ -323,6 +333,11 @@ tr:nth-child(odd) {
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     margin: 0;
+}
+
+.selectTextStyle {
+    font-style: italic;
+    font-weight: 500;
 }
 
 .saveBtn {
