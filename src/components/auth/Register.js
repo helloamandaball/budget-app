@@ -29,8 +29,8 @@ export const Register = (props) => {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            // email: email.current.value,
-                            username: username.current.value
+                            email: email.current.value,
+                            // username: username.current.value
                         })
                     })
                         .then(res => res.json())

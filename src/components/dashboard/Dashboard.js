@@ -22,17 +22,17 @@ export const Dashboard = () => {
 
             <section className="main"> 
                 {selectedBudget === 0 
-                ? 
-                    <div className="welcome">
-                        <h2>Welcome to Budget Tracker!</h2>
-                        <h4>To start, click on the NEW BUDGET+ button to create a budget, <br/>
-                        or click on an existing budget tab to view content.</h4>
-                        <h4>Thanks for using our app!</h4>
-                    </div>
-                : 
-                    <>
-                        <BudgetDetails key={selectedBudget.id} selectedBudget={selectedBudget} />
-                    </>
+                    ? 
+                        <div className="welcome">
+                            <h2>Welcome to Budget Tracker!</h2>
+                            <h4>To start, click on the NEW BUDGET+ button to create a budget, <br/>
+                            or click on an existing budget tab to view content.</h4>
+                            <h4>Thanks for using my app!</h4>
+                        </div>
+                    : 
+                        <>
+                            <BudgetDetails key={selectedBudget.id} selectedBudget={selectedBudget} />
+                        </>
                 }
             </section>
 
