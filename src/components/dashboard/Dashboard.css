@@ -28,7 +28,29 @@
     background-color: transparent;
 }
 
+.show {
+    display: block;
+}
 
+.hide {
+    display: none;
+}
+
+.welcome {
+    text-align: center;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+.welcome h2 {
+    padding-bottom: 1px;
+}
+
+.welcome h4 {
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: 20px;
+}
 
 
 

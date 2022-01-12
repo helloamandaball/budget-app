@@ -6,7 +6,7 @@ export const BudgetContext = createContext()
 // This component establishes what data can be used.
 export const BudgetsProvider = (props) => {
     const [budgets, setBudgets] = useState([])
-    const [selectedBudget, setSelectedBudget] = useState({});
+    const [selectedBudget, setSelectedBudget] = useState(0);
     const [searchTerms, setSearchTerms] = useState("")
 
     const getBudgets = () => {
